@@ -1,4 +1,20 @@
+<?php session_start();
+ob_start();
 
+
+
+
+
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='admin' ){
+
+    header("Location: ../../login.html");
+
+
+}
+
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>

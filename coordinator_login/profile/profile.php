@@ -4,7 +4,7 @@ session_start();
 
 $_SESSION['roll']=null;
 
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='coordinator'){
 
     header("Location: ../../login.html");
 
@@ -184,7 +184,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 <body class="no-skin">
 <?php
 
-if(isset($_FILES['image'])){
+if(isset($_FILES['image']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
 
@@ -241,7 +241,7 @@ if(isset($_FILES['image'])){
 
 }
 
-if(isset($_GET['roll']))
+if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='coordinator')
 {
 
 
@@ -535,7 +535,7 @@ if(isset($_GET['roll']))
                         <?php
 
 
-                        if(isset($_GET['roll'])){
+                        if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='coordinator'){
 
                             ?>
 
@@ -569,7 +569,7 @@ if(isset($_GET['roll']))
                                         <?php
 
 
-                                        if(isset($_SESSION['roll'])) {
+                                        if(isset($_SESSION['roll']) && isset($_SESSION['user_role'])=='coordinator') {
 
 
                                         include "../connect.php";
@@ -649,7 +649,7 @@ if(isset($_GET['roll']))
 
                                 <?php
 
-                                if(isset($_SESSION['roll'])){
+                                if(isset($_SESSION['roll']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
                                     include "../connect.php";

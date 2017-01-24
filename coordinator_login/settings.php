@@ -6,7 +6,7 @@
 
 
 
-    if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+    if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='coordinator'){
 
         header("Location: ../login.html");
 
@@ -19,7 +19,7 @@
 
 <?php
 
-if(isset($_GET['id'])){
+if(isset($_GET['id']) && isset($_SESSION['user_role'])=='coordinator'){
 
     include "connect.php";
     $user=$_GET['id'];

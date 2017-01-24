@@ -6,9 +6,9 @@ ob_start();
 
 
 
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='coordinator'){
 
-    header("Location: ../login.html");
+    header("Location: ../../login.html");
 
 
 
@@ -179,7 +179,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 
 
 
-if(isset($_GET['filter'])){
+if(isset($_GET['filter']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
     include "../connect.php";
@@ -209,7 +209,7 @@ if(isset($_GET['filter'])){
 
 }
 
-if(isset($_POST['send_mail']) && isset($_POST['filter']) ){
+if(isset($_POST['send_mail']) && isset($_POST['filter'])  && isset($_SESSION['user_role'])=='coordinator'){
 
 
     //get value from form
@@ -232,7 +232,7 @@ if(isset($_POST['send_mail']) && isset($_POST['filter']) ){
 
 
     //uploading file if exists
-    if(isset($_FILES['attachment'])){
+    if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
         $file_name = $_FILES['attachment']['name'];
@@ -318,7 +318,7 @@ if(isset($_POST['send_mail']) && isset($_POST['filter']) ){
 
 
 
-        if(isset($_FILES['attachment'])){
+        if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
 
@@ -360,7 +360,7 @@ if(isset($_POST['send_mail']) && isset($_POST['filter']) ){
         }
 
 
-        if(isset($_FILES['attachment'])){
+        if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
 
@@ -385,7 +385,7 @@ if(isset($_POST['send_mail']) && isset($_POST['filter']) ){
 
 }
 
-else if(isset($_POST['send_mail']) && isset($_POST['search'])){
+else if(isset($_POST['send_mail']) && isset($_POST['search']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
     $get_roll= $_POST['get_roll'];
@@ -403,7 +403,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
 
 
     //uploading file if exists
-    if(isset($_FILES['attachment'])){
+    if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
         $file_name = $_FILES['attachment']['name'];
@@ -511,7 +511,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
 
 
 
-        if(isset($_FILES['attachment'])){
+        if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
 
@@ -553,7 +553,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
         }
 
 
-        if(isset($_FILES['attachment'])){
+        if(isset($_FILES['attachment']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
 
@@ -979,7 +979,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
                                         include "../connect.php";
 
 
-                                        if(isset($_GET['search'])){
+                                        if(isset($_GET['search']) && isset($_SESSION['user_role'])=='coordinator'){
 
 
                                             include "../connect.php";
@@ -1218,7 +1218,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
                                         }
 
 
-                                        else if(isset($_GET['filter'])) {
+                                        else if(isset($_GET['filter']) && isset($_SESSION['user_role'])=='coordinator') {
 
 
                                             $get_year=$_GET['year'];
@@ -1475,7 +1475,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
                                                         <div class="space-4"></div>
 
 
-                                                        <?php   if(isset($_GET['filter'])){
+                                                        <?php   if(isset($_GET['filter']) && isset($_SESSION['user_role'])=='coordinator'){
 
                                                             ?>
 
@@ -1498,7 +1498,7 @@ else if(isset($_POST['send_mail']) && isset($_POST['search'])){
 
 
                                                         }
-                                                        else if(isset($_GET['search'])){
+                                                        else if(isset($_GET['search']) && isset($_SESSION['user_role'])=='coordinator'){
 
                                                             $tags= $_GET['tags'];
                                                             ?>

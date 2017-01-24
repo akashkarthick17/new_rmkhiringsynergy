@@ -6,9 +6,9 @@ ob_start();
 
 
 
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='coordinator'){
 
-    header("Location: ../login.html");
+    header("Location: ../../login.html");
 
 
 }
@@ -135,7 +135,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 
 <?php
 
-if(isset($_POST['update_submit'])) {
+if(isset($_POST['update_submit']) && isset($_SESSION['user_role'])=='coordinator') {
 
 
     $get_id= $_POST['company_id'];
@@ -433,7 +433,7 @@ if(isset($_POST['update_submit'])) {
 
 
                         <?php
-                        if(isset($_GET['cid'])){
+                        if(isset($_GET['cid']) && isset($_SESSION['user_role'])=='coordinator'){
 
                             include "../connect.php";
 

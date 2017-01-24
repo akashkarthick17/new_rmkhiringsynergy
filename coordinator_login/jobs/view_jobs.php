@@ -6,9 +6,9 @@ ob_start();
 
 
 
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='coordinator'){
 
-    header("Location: ../login.html");
+    header("Location: ../../login.html");
 
 
 }
@@ -385,7 +385,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
                         <?php
 
 
-                        if(isset($_FILES['placement_file']))
+                        if(isset($_FILES['placement_file']) && isset($_SESSION['user_role'])=='coordinator')
                         {
 
                             include "../connect.php";

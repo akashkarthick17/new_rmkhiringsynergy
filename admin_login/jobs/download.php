@@ -1,7 +1,7 @@
 <?php
 
 
-if(isset($_GET['file'])) {
+if(isset($_GET['file'])  && isset($_SESSION['user_role'])=='admin' ) {
 
 
     $id = $_GET['file'];

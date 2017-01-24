@@ -2,9 +2,9 @@
 ob_start();
 
 
-if (!isset($_SESSION['user']) && $_SESSION['user'] == null) {
+if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['user_role'])!='coordinator') {
 
-    header("Location: ../login.html");
+    header("Location: ../../login.html");
 
 
 }
@@ -748,7 +748,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null) {
                                                             <?php
 
 
-                                                            if (isset($_GET['jid']) && $_GET['flag']==0) {
+                                                            if (isset($_GET['jid']) && $_GET['flag']==0 && isset($_SESSION['user_role'])=='coordinator') {
 
                                                                 $jid = $_GET['jid'];
 
@@ -803,7 +803,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null) {
                                                             <?php
 
 
-                                                            if (isset($_GET['jid']) && $_GET['flag']==1) {
+                                                            if (isset($_GET['jid']) && $_GET['flag']==1 && isset($_SESSION['user_role'])=='coordinator') {
 
                                                                 $jid = $_GET['jid'];
 
@@ -855,7 +855,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null) {
                                                             <?php
 
 
-                                                            if (isset($_GET['jid']) && $_GET['flag']==2) {
+                                                            if (isset($_GET['jid']) && $_GET['flag']==2 && isset($_SESSION['user_role'])=='coordinator') {
 
                                                                 $jid = $_GET['jid'];
 
