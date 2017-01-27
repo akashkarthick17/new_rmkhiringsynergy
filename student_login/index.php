@@ -1,7 +1,16 @@
 
 <?php
+
 session_start();
 ob_start();
+
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='student'){
+
+    header("Location: ../login.php");
+
+
+}
+
 ?>
 
 
@@ -78,7 +87,7 @@ ob_start();
 
 <body class="no-skin">
 <?php
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])=='student'){
     header("Location: ../login.php");
 }
 ?>
