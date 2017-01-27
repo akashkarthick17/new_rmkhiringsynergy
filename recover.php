@@ -278,7 +278,9 @@ if(isset($_GET['id']) && isset($_GET['hash'])){
 
 
 
-                            <?php 
+                            <?php
+
+                $error=1;
 
 
 
