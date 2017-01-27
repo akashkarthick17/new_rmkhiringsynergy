@@ -267,6 +267,15 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
 
     <link rel="stylesheet" href="../assets/css/colorbox.min.css" />
 
+    <link rel="stylesheet" href="../assets/css/jquery-ui.custom.min.css" />
+    <link rel="stylesheet" href="../assets/css/chosen.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/daterangepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-colorpicker.min.css" />
+
+
     <!-- text fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
 
@@ -1046,8 +1055,8 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
 
 
-                        <input type="text" name="roll">
-                        <button type="submit"  class="btn btn-success ">search</button>
+                        <input type="text" id="tag1" name="roll">
+                        <button type="submit"  id="bootbox-search" class="btn btn-success ">search</button>
                     </form>
 
 
@@ -3387,6 +3396,33 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                 } catch(e) {}
                                 $('[class*=select2]').remove();
                             });
+                        });
+                        $('#bootbox-search').click(function(event){
+
+
+
+                            var bld = $('#tag1').val();
+                            if(bld=='')
+                            {
+
+                                bootbox.dialog({
+                                    message: "Please enter the search value",
+                                    buttons: {
+                                        "success" : {
+                                            "label" : "OK",
+                                            "className" : "btn-sm btn-primary"
+                                        }
+                                    }
+
+                                } );
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            else
+                            {
+
+
+                            }
                         });
                     </script>
 </body>
