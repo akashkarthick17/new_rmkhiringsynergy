@@ -11,6 +11,8 @@ if(isset($_POST['login'])){
     $student_branch=null;
     $student_table=null;
     $admin_database=null;
+    $coordinator_branch=null;
+    $student_year=null;
     $student_roll=null;
     $admin_name="initialize";
     $admin_password="initialize";
@@ -110,6 +112,7 @@ if(isset($_POST['login'])){
 
         $row_short=mysqli_fetch_assoc($result_short);
         $student_table=$row_short['table_name'];
+        $student_year=$row_short['table_value'];
         $query_student="SELECT * FROM $student_table WHERE st_roll='{$username}'";
         $result_student=mysqli_query($connect, $query_student);
 
@@ -195,6 +198,7 @@ if(isset($_POST['login'])){
         $_SESSION['user'] = $username;
 
         $_SESSION['student_name']=$student_name;
+        $_SESSION['student_year']=$student_year;
 
         $_SESSION['student_roll']=$student_roll;
         $_SESSION['student_branch']=$student_branch;

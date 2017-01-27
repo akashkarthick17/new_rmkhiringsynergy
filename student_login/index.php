@@ -129,65 +129,74 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 
                 <li class="purple dropdown-modal">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <?php
+
+
+                        include "connect.php";
+
+                        $student_branch= $_SESSION['student_branch'];
+                        $student_year=$_SESSION['student_year'];
+
+
+                        $query_notification="SELECT * FROM jobs WHERE job_branch LIKE '%".$student_branch."%' and year_of_graduation='$student_year' and job_session='1'";
+                        $result_notification=mysqli_query($connect, $query_notification);
+                        $no_of_rows=mysqli_num_rows($result_notification);
+
+
+
+                        ?>
+
+
                         <i class="ace-icon fa fa-bell icon-animated-bell"></i>
-                        <span class="badge badge-important">8</span>
+                        <span class="badge badge-important"><?php echo $no_of_rows; ?></span>
                     </a>
 
                     <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
                         <li class="dropdown-header">
                             <i class="ace-icon fa fa-exclamation-triangle"></i>
-                            8 Notifications
+                            <?php echo $no_of_rows; ?> Notifications
                         </li>
 
                         <li class="dropdown-content">
                             <ul class="dropdown-menu dropdown-navbar navbar-pink">
-                                <li>
-                                    <a href="#">
-                                        <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-                                                        New Comments
-                                                    </span>
-                                            <span class="pull-right badge badge-info">+12</span>
-                                        </div>
-                                    </a>
-                                </li>
 
-                                <li>
-                                    <a href="#">
-                                        <i class="btn btn-xs btn-primary fa fa-user"></i>
-                                        Bob just signed up as an editor ...
-                                    </a>
-                                </li>
+                                <?php
 
-                                <li>
-                                    <a href="#">
-                                        <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-                                                        New Orders
-                                                    </span>
-                                            <span class="pull-right badge badge-success">+8</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                while($row_notification=mysqli_fetch_assoc($result_notification)) {
 
-                                <li>
-                                    <a href="#">
-                                        <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-                                                        Followers
+
+                                    ?>
+
+
+                                    <li>
+                                        <a href="jobs/view_jobs.php?job_id=<?php echo $row_notification['job_id'] ;?>">
+                                            <div class="clearfix">
+                                                    <span class="pull-left" style="font-weight: 600; font-size: 12px;">
+                                                        <i class="btn btn-xs no-hover btn-pink fa fa-comment "></i>
+
+                                                       You got a new job posted from <label style="color: red;"><?php  echo $row_notification['company'] ?>  </label>
+                                                       check your status
+
+
                                                     </span>
-                                            <span class="pull-right badge badge-info">+11</span>
-                                        </div>
-                                    </a>
-                                </li>
+
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <?php
+
+
+                                }
+
+                                ?>
+
+
                             </ul>
                         </li>
 
                         <li class="dropdown-footer">
-                            <a href="#">
+                            <a href="jobs/view_jobs.php">
                                 See all notifications
                                 <i class="ace-icon fa fa-arrow-right"></i>
                             </a>
@@ -222,11 +231,12 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 
 
                             <img class="nav-user-photo" src="images/<?php echo $row['st_pic']; ?>" alt="No Photo" />
-                        <?php } ?>
+
                         <span class="user-info">
                                     <small>Welcome,</small>
-                                    Student
+                                   <?php echo $row['st_name']; ?>
                                 </span>
+                        <?php } ?>
 
                         <i class="ace-icon fa fa-caret-down"></i>
                     </a>

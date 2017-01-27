@@ -17,6 +17,8 @@ $_SESSION['student_branch']=null;
 $_SESSION['table_name']=null;
 $_SESSION['database_name']=null;
 $_SESSION['user_role']=null;
+$_SESSION['cood_branch']=null;
+$_SESSION['$student_year']=null;
 
 header("Location: ../login.php");
 ?>
