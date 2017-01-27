@@ -275,10 +275,6 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
     <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" href="../assets/css/bootstrap-colorpicker.min.css" />
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     <!-- text fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
 
@@ -1057,14 +1053,9 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
 
 
-
-<<<<<<< HEAD
-                        <input type="text" id="delete-textbox"name="roll">
-                        <button type="submit" id="bootbox-delete" class="btn btn-success ">search</button>
-=======
                         <input type="text" id="tag1" name="roll">
                         <button type="submit"  id="bootbox-search" class="btn btn-success ">search</button>
->>>>>>> origin/master
+
                     </form>
 
 
