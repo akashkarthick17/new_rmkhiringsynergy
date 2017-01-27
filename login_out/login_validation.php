@@ -215,7 +215,7 @@ if(isset($_POST['login'])){
 
     else{
 
-        header("Location: ../login.html");
+        header("Location: ../login.php");
 
     }
 
@@ -321,13 +321,66 @@ else if(isset($_POST['proceed'])){
 
 
 
-                    $to = $row_student_select['st_email'];
-                    $subject = "Password Reset";
-                    $txt = "http://localhost/rmkhiringsynergy/recover.php/".$hash;
-                    $headers = "From: karthickakash17@gmail.com" . "\r\n" ;
+                     $to = $row_student_select['st_email'];
+                     $user_mail=$row_student_select['st_roll'];
 
 
-                    mail($to,$subject,$txt,$headers);
+                   require "../admin_login/email/PHPMailer/PHPMailerAutoload.php";
+
+                    $mail=new PHPMailer();
+
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                    $mail->Username = 'dhoni.singh1703@gmail.com';                 // SMTP username
+                    $mail->Password = 'akash170397';                           // SMTP password
+                    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                    $mail->Port = 465;
+
+
+                    $mail->setFrom('dhoni.singh1703@gmail.com', 'RMD Placements');
+                    $mail->addAddress($to, $to);     // Add a recipient
+
+                    $mail->addReplyTo('dhoni.singh1703@gmail.com', 'Reply');
+
+
+                    
+
+                    $mail->isHTML(true);
+
+                    $mail->Subject = "test mail";
+                    $mail->Body    = 'http://localhost/new_rmkhiringsynergy/recover.php?id='.$user_mail."&hash=".$hash;
+
+
+
+                    if(!$mail->send()) {
+
+                        echo "error in sending mail";
+                    }
+                    else{
+
+
+
+
+                        $_SESSION['reset']=1;
+                        header("Location: ../login.php ");
+
+                        echo "Successfully sent";
+
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,7 +434,7 @@ else if(isset($_POST['proceed'])){
 else{
 
 
-    header("Location: ../login.html");
+    header("Location: ../login.php");
 
 
 

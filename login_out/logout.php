@@ -18,5 +18,5 @@ $_SESSION['table_name']=null;
 $_SESSION['database_name']=null;
 $_SESSION['user_role']=null;
 
-header("Location: ../login.html");
+header("Location: ../login.php");
 ?>

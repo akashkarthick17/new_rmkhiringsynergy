@@ -134,7 +134,7 @@ if(isset($_POST['action_update'])){
 
 if(! isset($_SESSION['user']) && $_SESSION['user']==null){
 
-    header("Location: ../login.html");
+    header("Location: ../login.php");
 
 
 }

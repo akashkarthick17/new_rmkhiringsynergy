@@ -1,3 +1,124 @@
+<?php
+
+session_start();
+ob_start();
+
+$error=0;
+if(isset($_GET['id']) && isset($_GET['hash'])){
+
+
+
+
+
+
+
+
+ $proceed_username=$_GET['id'];  
+  $hash=$_GET['hash'];
+
+
+    $connect_database=mysqli_connect("localhost","root","","login_database");
+
+
+    //selecting admin database  and coordinator database........
+    $query_selection="SELECT * FROM admin_login WHERE username='{$proceed_username}'";
+    $result_selection=mysqli_query($connect_database, $query_selection);
+    if(!$result_selection==null){
+
+
+
+
+
+        $row_selection=mysqli_fetch_assoc($result_selection);
+        if(!$row_selection==null) {
+
+            echo "The user is admin or coordinator";
+            $is_user_valid=true;
+
+            $admin_database = $row_selection['database_name'];
+
+
+            $connect = mysqli_connect("localhost", "root", "", "$admin_database");
+        }
+
+    }
+
+
+
+    //selecting student database.........
+    $student_user=$proceed_username[0].$proceed_username[1].$proceed_username[2].$proceed_username[3];
+
+    if($student_user=='1115'){
+
+        $database_session_set='rmd_database';
+        $connect=mysqli_connect("localhost","root","","rmd_database");
+
+
+    }
+    else if($student_user=='1116'){
+
+        $database_session_set='rmkcet_database';
+        $connect=mysqli_connect("localhost","root","","rmkcet_database");
+
+    }
+    else if($student_user=='1117'){
+
+        $database_session_set='rmk_database';
+        $connect=mysqli_connect("localhost","root","","rmk_database");
+
+    }
+
+
+
+
+
+    //student login
+
+    $isstudent=$proceed_username[4].$proceed_username[5];
+    $isstudent+=4;
+
+    
+    $query_short="SELECT * FROM table_map WHERE table_short='{$isstudent}'";
+    if($connect!=null) {
+        $result_short = mysqli_query($connect, $query_short);
+
+        
+
+
+        if (!$result_short == null) {
+
+
+            
+
+            $row_short = mysqli_fetch_assoc($result_short);
+            $student_table = $row_short['table_name'];
+
+            $query_student = "SELECT * FROM $student_table where st_roll='$proceed_username' and st_forgotpassword='$hash'";
+            $result_student = mysqli_query($connect, $query_student);
+
+            $no_rows=mysqli_num_rows($result_student);
+
+
+
+            if (!$result_student ==  null && $no_rows != 0) {
+
+
+
+                $student_database= $database_session_set;
+
+
+
+
+
+               
+                            //validating code
+
+                            ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +166,7 @@
                         <div class="hamburger-icon"></div>
                     </button>
 
-                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link link" href="login.html">Login</a></li><li class="nav-item"><a class="nav-link link" href="about.html">About</a></li></ul>
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link link" href="login.php">Login</a></li><li class="nav-item"><a class="nav-link link" href="about.html">About</a></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -76,25 +197,28 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-8 col-sm-offset-2" >
-                        <form class="mbr-form" action="login_out/login_validation.php" method="post" data-form-title="SUBSCRIBE TO OUR NEWSLETTER">
+                        <form class="mbr-form" action="recover.php" method="post" data-form-title="SUBSCRIBE TO OUR NEWSLETTER">
                             <input type="hidden" value="4+KZ6DAOiZL+O+QQz5EueLQuEqNeyVsC4dAxGOAIgkyiY/9Qx7qypfBuHc1OiwSpb6o7HXnpk08dW5Jw2AWcy6tv+9OkilOSUXWfVukhUhEBXEbYCtpBWwMC5Rg9Vt7o" data-form-email="true">
 
+<input type="hidden" name="database" value="<?php echo  $student_database; ?>" >  
+<input type="hidden" name="table" value="<?php echo  $student_table; ?>" > 
+<input type="hidden" name="roll" value="<?php echo  $proceed_username; ?>" > 
                             <div class="row">
                                 <div class="col-xs-12 col-md-6">
                                     <label for="pass" style="font-weight: 600; color:white;">NEW PASSWORD:</label>
-                                    <input type="password" class="form-control" name="username" style="width: 80%;"  required="" placeholder="Enter new Password" data-form-field="Email">
+                                    <input type="password" class="form-control" name="first_password" style="width: 80%;"  required="" placeholder="Enter new Password" data-form-field="Email">
                                 </div>
 
                                 <div class="col-xs-12 col-md-6">
                                     <label for="pass" style="font-weight: 600; color:white;">CONFIRM PASSWORD:</label>
-                                    <input type="password" class="form-control" id="pass" style="width: 80%;" name="password" required="" placeholder="Confirm Password" data-form-field="Email">
+                                    <input type="password" class="form-control" id="pass" style="width: 80%;" name="second_password" required="" placeholder="Confirm Password" data-form-field="Email">
                                 </div>
                             </div>
 
                             <br>
 
                             <div class="col-xs-10 col-md-6 cmbr-buttons mbr-box__magnet--bottom-left ">
-                                <button type="submit" name="login" class="mbr-buttons__btn btn btn-lg btn-danger">RESET</button>
+                                <button type="submit" name="reset" class="mbr-buttons__btn btn btn-lg btn-danger">RESET</button>
                             </div>
 
                         </form>
@@ -144,3 +268,138 @@
 <input name="animation" type="hidden">
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+                            <?php 
+
+
+
+
+
+                }
+
+
+
+
+            }
+
+
+        }
+
+    }
+
+  else  if(isset($_POST['reset'])  &&   $_POST['first_password']==$_POST['second_password']  ){
+
+
+
+ $first_get_password=$_POST['first_password'];
+ $second_get_password=$_POST['second_password'];
+
+
+$database='';
+
+
+
+$database.= $_POST['database'];
+$table= $_POST['table'];
+ $roll=$_POST['roll'];
+
+
+
+$database=trim($database," ");
+
+
+
+
+
+
+ $connect=mysqli_connect("localhost","root","","$database");
+
+
+$secured_password=password_hash($first_get_password,PASSWORD_BCRYPT, array('cost' => 14));
+
+
+ $query_validate=" UPDATE $table SET st_pass = '$secured_password' ,st_forgotpassword='' WHERE st_roll='$roll' ";
+ $result_validate=mysqli_query($connect,$query_validate);
+if(!$result_validate==null ){
+
+
+
+    $error=1;
+
+$_SESSION['recover']=1;
+header("Location: login.php");
+
+
+}
+else{
+
+
+
+echo "not successfully updated";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "hurray";
+
+
+    }
+
+
+
+
+
+
+    //displaying error message
+    if($error==0){
+
+
+
+      include "error-404.php";
+
+    }
+
+
+
+
+
+
+
+ ?>

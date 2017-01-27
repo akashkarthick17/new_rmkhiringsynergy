@@ -193,7 +193,7 @@ if(isset($_GET['delete']) && isset($_SESSION['user_role'])=='admin' )
 		<script type="text/javascript">
 
             function myfuncreport() {
-                Location.href = "reports/reports.php";
+                location.href = "reports/reports.php";
             }
 
             function myfuncadmin() {
@@ -279,7 +279,7 @@ if(isset($_GET['delete']) && isset($_SESSION['user_role'])=='admin' )
 
     {
 
-        header("Location: ../login.html");
+        header("Location: ../login.php");
 
 
     }
@@ -1472,6 +1472,8 @@ if(isset($_GET['delete']) && isset($_SESSION['user_role'])=='admin' )
 
                 }
             });
+
+
 
 
 

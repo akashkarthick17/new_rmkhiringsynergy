@@ -8,7 +8,7 @@ $_SESSION['roll']=null;
 
 if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='admin' ){
 
-    header("Location: ../../login.html");
+    header("Location: ../../login.php");
 
 
 }
@@ -266,6 +266,14 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
     <!-- page specific plugin styles -->
 
     <link rel="stylesheet" href="../assets/css/colorbox.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.custom.min.css" />
+    <link rel="stylesheet" href="../assets/css/chosen.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/daterangepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-colorpicker.min.css" />
 
     <!-- text fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
@@ -1046,8 +1054,8 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
 
 
-                        <input type="text" name="roll">
-                        <button type="submit"  class="btn btn-success ">search</button>
+                        <input type="text" id="delete-textbox"name="roll">
+                        <button type="submit" id="bootbox-delete" class="btn btn-success ">search</button>
                     </form>
 
 
@@ -3386,6 +3394,34 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                     $('.editable').editable('destroy');
                                 } catch(e) {}
                                 $('[class*=select2]').remove();
+                            });
+
+                            $('#bootbox-delete').click(function(event){
+
+
+
+                                var bld = $('#delete-textbox').val();
+                                if(bld=='')
+                                {
+
+                                    bootbox.dialog({
+                                        message: "Please enter the search value",
+                                        buttons: {
+                                            "success" : {
+                                                "label" : "OK",
+                                                "className" : "btn-sm btn-primary"
+                                            }
+                                        }
+
+                                    } );
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                else
+                                {
+
+
+                                }
                             });
                         });
                     </script>
