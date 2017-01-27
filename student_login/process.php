@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET['pass'])){
+if(isset($_GET['pass']) && isset($_SESSION['user_role'])=='student'){
 
 
 
