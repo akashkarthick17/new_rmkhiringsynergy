@@ -43,7 +43,7 @@ if (isset($_GET['profile'])&& isset($_SESSION['user_role'])=='admin') {
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 }
 
@@ -96,7 +96,7 @@ st_state='{$state}',st_posatlcode='{$pincode}',st_landline='{$landline}' WHERE s
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
@@ -169,7 +169,7 @@ st_pg4thsem='{$pgsem4}',st_standingarrears='{$pgstandarrears}',st_historyofarrea
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
@@ -213,7 +213,7 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
