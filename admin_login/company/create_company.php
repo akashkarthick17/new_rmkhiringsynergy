@@ -1052,12 +1052,49 @@ if(isset($_POST['create']) && isset($_FILES['logo']) && isset($_SESSION['user_ro
 
 
         $('#validate-form').on('submit', function() {
-            var hidden_input =
-                $('<input type="hidden" name="description" />')
+
+           var hidden_input =
+                $('<input type="hidden" name="description" id="description" />')
                     .appendTo('#validate-form');
 
+
             var html_content = $('#editor1').html();
+
+
             hidden_input.val( html_content );
+
+
+
+
+
+
+            if(html_content==''){
+
+
+                bootbox.dialog({
+                    message: "Please enter the description",
+                    buttons: {
+                        "success" : {
+                            "label" : "OK",
+                            "className" : "btn-sm btn-primary"
+                        }
+                    }
+
+                } );
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+
+
+
+
+
+
+
+
+
+
             //put the editor's HTML into hidden_input and it will be sent to server
         });
 
@@ -1840,13 +1877,10 @@ if(isset($_POST['create']) && isset($_FILES['logo']) && isset($_SESSION['user_ro
 				$('#bootbox-confirm').click(function(event){
                     var bla = $('#tag1').val();
 					var blb = $('#tag2').val();
-            var hidden_input =
-                $('<input type="hidden" name="description" />')
-                    .appendTo('#validate-form');
 
-            var blc = $('#editor1').val();
-          // var blc=hidden_input.val( html_content );
-					if(bla==''&&blb=='')
+
+
+					if(bla=='' && blb=='')
 					{
 					
 		                bootbox.dialog({
@@ -1895,22 +1929,7 @@ if(isset($_POST['create']) && isset($_FILES['logo']) && isset($_SESSION['user_ro
                 event.preventDefault();
                 event.stopPropagation();
 			}
-			else if(blc==''){
-				
-			
-        bootbox.dialog({
-            message: "Please enter the description",
-            buttons: {
-                "success" : {
-                    "label" : "OK",
-                    "className" : "btn-sm btn-primary"
-                }
-            }
 
-        } );
-        event.preventDefault();
-        event.stopPropagation();
-	}
 			else{
 				
 				

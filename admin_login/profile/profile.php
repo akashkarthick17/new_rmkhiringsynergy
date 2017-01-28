@@ -34,16 +34,16 @@ if (isset($_GET['profile']) && isset($_SESSION['user_role'])=='admin' ) {
     $query_change_profile = "UPDATE $tname SET  st_name='{$fullname}',st_phone='{$phoneno}',st_email='{$emailid}',st_cgpa='{$cgpa}',st_collegename='{$collegename}' WHERE st_roll='{$rollno}'";
     $result_change_profile = mysqli_query($connect, $query_change_profile);
 
-        if (!$result_change_profile) {
+    if (!$result_change_profile) {
 
-            die("" . mysqli_error($connect));
-        }
-
-
+        die("" . mysqli_error($connect));
+    }
 
 
 
-    header("Location: profile.php");
+
+
+    header("Location: profile.php?roll=$rollno");
 
 }
 
@@ -96,7 +96,7 @@ st_state='{$state}',st_posatlcode='{$pincode}',st_landline='{$landline}' WHERE s
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
@@ -153,7 +153,7 @@ st_state='{$state}',st_posatlcode='{$pincode}',st_landline='{$landline}' WHERE s
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
@@ -197,7 +197,7 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
 
 
 
-    header("Location: profile.php");
+    header("Location: profile.php?roll=$rollno");
 
 
 
@@ -325,25 +325,25 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
 
 
 
-             border-bottom-style: inset;
-             border-bottom-color:#FFBCD8;
+            border-bottom-style: inset;
+            border-bottom-color:#FFBCD8;
 
 
-         }
+        }
         .testblue{
 
 
 
-              border-bottom-style: inset;
-              border-bottom-color:#EDF3F4;
+            border-bottom-style: inset;
+            border-bottom-color:#EDF3F4;
 
-          }
-          .testred{
+        }
+        .testred{
 
-              border-bottom-style: inset;
-              border-bottom-color:#F1A9A0;
+            border-bottom-style: inset;
+            border-bottom-color:#F1A9A0;
 
-          }
+        }
         .test3{
 
             margin-left: 10px;
@@ -518,7 +518,7 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                                <li class="purple dropdown-modal">
+                <li class="purple dropdown-modal">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
 
@@ -559,45 +559,45 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                         <span class="badge badge-important"><?php echo $no_notification ?></span>
                     </a>
 
-                                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-                                        <li class="dropdown-header">
-                                            <i class="ace-icon fa fa-exclamation-triangle"></i>
-                                            <?php echo $no_notification ?> Notifications
-                                        </li>
+                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-exclamation-triangle"></i>
+                            <?php echo $no_notification ?> Notifications
+                        </li>
 
 
-                                        <li class="dropdown-content">
+                        <li class="dropdown-content">
 
 
-                                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
 
-                                                <?php
-
-
-
-                                                include "../connect.php";
-                                                $query_table = "SELECT * FROM table_map";
-                                                $result_table = mysqli_query($connect, $query_table);
-
-                                                while ($row = mysqli_fetch_assoc($result_table)) {
-                                                    $tname = $row['table_name'];
-                                                    $query_year = "SELECT * from $tname";
-                                                    $result_year = mysqli_query($connect, $query_year);
-
-                                                    $no_notification=mysqli_num_rows($result_year);
+                                <?php
 
 
-                                                    while ($row1 = mysqli_fetch_assoc($result_year)) {
+
+                                include "../connect.php";
+                                $query_table = "SELECT * FROM table_map";
+                                $result_table = mysqli_query($connect, $query_table);
+
+                                while ($row = mysqli_fetch_assoc($result_table)) {
+                                    $tname = $row['table_name'];
+                                    $query_year = "SELECT * from $tname";
+                                    $result_year = mysqli_query($connect, $query_year);
+
+                                    $no_notification=mysqli_num_rows($result_year);
 
 
-                                                        if ($row1['st_changemail'] != NULL || $row1['st_changephone']!= NULL) {
+                                    while ($row1 = mysqli_fetch_assoc($result_year)) {
 
 
-                                                            ?>
+                                        if ($row1['st_changemail'] != NULL || $row1['st_changephone']!= NULL) {
 
-                                                            <li>
-                                                                <a href="../approve.php?roll=<?php  echo $row1['st_roll']; ?>">
-                                                                    <div class="clearfix">
+
+                                            ?>
+
+                                            <li>
+                                                <a href="../approve.php?roll=<?php  echo $row1['st_roll']; ?>">
+                                                    <div class="clearfix">
 
 		             <span class="pull-left">
 			               <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
@@ -654,30 +654,30 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 				</span>
 
 
-                                                                    </div>
-                                                                </a>
-                                                            </li>
+                                                    </div>
+                                                </a>
+                                            </li>
 
 
 
 
-                                                            <?php
-                                                        }
+                                            <?php
+                                        }
 
 
-                                                    }
+                                    }
 
 
-                                                }
+                                }
 
 
-                                                ?>
+                                ?>
 
 
 
 
-                                            </ul>
-                                        </li>
+                            </ul>
+                        </li>
                         <li class="dropdown-footer">
                             <a href="../approve.php">
                                 See all notifications
@@ -1049,13 +1049,38 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
 
                     <form action="profile.php" method="get">
-                        <label class="red bolder"> Search Profile  -</label>
+                        <label class="red bolder"> Enter Register Number-</label>
+
+
+                        <?php
+
+                        if(isset($_GET['roll'])){
+
+                           ?>
+
+                            <input type="text" id="delete-textbox"name="roll" value="<?php echo $_GET['roll']; ?>">
 
 
 
-                        <input type="text" id="tag1" name="roll">
-                        <button type="submit"  id="bootbox-search" class="btn btn-success ">search</button>
+                            <?php
 
+
+                        }
+
+                        else{
+
+
+
+
+
+
+                        ?>
+
+
+                        <input type="text" id="delete-textbox"name="roll">
+
+                        <?php } ?>
+                        <button type="submit" id="bootbox-delete" class="btn btn-success ">search</button>
                     </form>
 
 
@@ -1104,33 +1129,33 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
 
 
-                                            ?>
+                                                ?>
 
 
-                                        <div class="space-4"></div>
+                                                <div class="space-4"></div>
 
 
-                                        <div class="space-16"></div>
+                                                <div class="space-16"></div>
 
 
-                                        <div class="col-xs-12  center middle align-center align-middle">
-                                            <ul class="ace-thumbnails clearfix">
+                                                <div class="col-xs-12  center middle align-center align-middle">
+                                                    <ul class="ace-thumbnails clearfix">
 
 
-                                                <li>
+                                                        <li>
 
-                                                    <img style="max-height: 220px; max-width:300px ;"
-                                                         src="../../student_login/images/<?php echo $row['st_pic'] ?>"/>
-
-
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                        <?php
+                                                            <img style="max-height: 220px; max-width:300px ;"
+                                                                 src="../../student_login/images/<?php echo $row['st_pic'] ?>"/>
 
 
-                                        }
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                                <?php
+
+
+                                            }
                                         }
                                         ?>
 
@@ -1159,27 +1184,27 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                 if(isset($_SESSION['roll']) && isset($_SESSION['user_role'])=='admin' ){
 
 
-                                include "../connect.php";
-                                $username = $_SESSION['roll'];
+                                    include "../connect.php";
+                                    $username = $_SESSION['roll'];
 
 
-                                $isstudent = $username[4] . $username[5];
-                                $isstudent += 4;
+                                    $isstudent = $username[4] . $username[5];
+                                    $isstudent += 4;
 
-                                $query_short = "SELECT * FROM table_map WHERE table_short='{$isstudent}'";
-                                $result_short = mysqli_query($connect, $query_short);
-                                $row_short = mysqli_fetch_assoc($result_short);
+                                    $query_short = "SELECT * FROM table_map WHERE table_short='{$isstudent}'";
+                                    $result_short = mysqli_query($connect, $query_short);
+                                    $row_short = mysqli_fetch_assoc($result_short);
 
-                                $student_table = $row_short['table_name'];
-                                $query="SELECT * FROM $student_table WHERE st_roll='{$username}'";
+                                    $student_table = $row_short['table_name'];
+                                    $query="SELECT * FROM $student_table WHERE st_roll='{$username}'";
 
-                                $result=mysqli_query($connect, $query);
-                                if(!$connect){
+                                    $result=mysqli_query($connect, $query);
+                                    if(!$connect){
 
-                                    die("".mysqli_error($connect));
-                                }
+                                        die("".mysqli_error($connect));
+                                    }
 
-                                $row=mysqli_fetch_assoc($result);
+                                    $row=mysqli_fetch_assoc($result);
 
                                 }
 
@@ -2143,394 +2168,394 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                 <div id="modal-form3" class="modal" tabindex="-1">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-			<form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="blue bigger">Edit the following form fields</h4>
-                                            </div>
+                                            <form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="blue bigger">Edit the following form fields</h4>
+                                                </div>
 
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-7">
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-7">
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <h1>SSLC (X)</h1>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-c3">Institution</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-c3" name="10thschoolname" placeholder="" value="" />
+                                                                    <h1>SSLC (X)</h1>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop3">Medium</label>
-                                                                <select name="10thmedium" class="form-control" id="form-field-q1">
-                                                                    <option value="eng">English</option>
-                                                                    <option value="tam">Tamil</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop3">Year of Passing</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-yop3" placeholder="" name="10thyearofpass" value="<?php echo $row['st_10thyearofpassing']?>" />
+                                                                    <label for="form-field-c3">Institution</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-c3" name="10thschoolname" placeholder="" value="" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p3">Percentage/CGPA</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p3" placeholder="" name="10thpercent" value="<?php echo $row['st_10thpercentage']?>" />
+                                                                    <label for="form-field-yop3">Medium</label>
+                                                                    <select name="10thmedium" class="form-control" id="form-field-q1">
+                                                                        <option value="eng">English</option>
+                                                                        <option value="tam">Tamil</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <h1>HSC (XII)</h1>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-c2">Institution</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-c2" placeholder="" name="12thschoolname" value="" />
+                                                                    <label for="form-field-yop3">Year of Passing</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-yop3" placeholder="" name="10thyearofpass" value="<?php echo $row['st_10thyearofpassing']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop3">Medium</label>
-                                                                <select name="12thmedium" class="form-control" id="form-field-q1">
-                                                                    <option value="eng">English</option>
-                                                                    <option value="tam">Tamil</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop2">Year of Passing</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-yop2" placeholder="" name="12thyearofpass" value="<?php echo $row['st_12thyearofpassing']?>" />
+                                                                    <label for="form-field-p3">Percentage/CGPA</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p3" placeholder="" name="10thpercent" value="<?php echo $row['st_10thpercentage']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Percentage/CGPA</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="12thpercent" value="<?php echo $row['st_12thpercentage']?>" />
+                                                                    <h1>HSC (XII)</h1>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <h1>UG</h1>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-q1">Qualification</label>
-                                                                <select name="ugqualification" class="form-control" id="form-field-q1">
-                                                                    <option value="be">B.E</option>
-                                                                    <option value="bt">B.Tech</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-b1">Branch</label>
-                                                                <select name="ugbranch" class="form-control" id="form-field-b1">
-					<option></option>
-                                                                    <option value="cse">Computer Science Engineering</option>
-                                                                    <option value="it">Information Technology</option>
-                                                                    <option value="mech">Mechanical Engineering</option>
-                                                                    <option value="ece">Electronics and Communication Engineering</option>
-                                                                    <option value="eee">Electrical and Electronics Engineering</option>
-                                                                    <option value="eie">Electronics and Instrumentation Engineering</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-c1">Institution</label>
-
-                                                                <select name="ugclgname" class="form-control" id="form-field-c1">
-                                                                    <option value="rmk">RMK Engineering College</option>
-                                                                    <option value="rmd">RMD Engineering COllege</option>
-                                                                    <option value="rmkcet">RMK College of Engineering and Technology</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop1">Year of Passing</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-yop1" placeholder="" name="ugyearofpass" value="<?php echo $row['st_ugyearofpassing']?>" />
+                                                                    <label for="form-field-c2">Institution</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-c2" placeholder="" name="12thschoolname" value="" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p1">Percentage/CGPA</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p1" placeholder="" name="ugcgpa" value="<?php echo $row['st_cgpa']?>" />
+                                                                    <label for="form-field-yop3">Medium</label>
+                                                                    <select name="12thmedium" class="form-control" id="form-field-q1">
+                                                                        <option value="eng">English</option>
+                                                                        <option value="tam">Tamil</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">First Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="1sem" value="<?php echo $row['st_1stsem']?>" />
+                                                                    <label for="form-field-yop2">Year of Passing</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-yop2" placeholder="" name="12thyearofpass" value="<?php echo $row['st_12thyearofpassing']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Second Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="2sem" value="<?php echo $row['st_2ndsem']?>" />
+                                                                    <label for="form-field-p2">Percentage/CGPA</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="12thpercent" value="<?php echo $row['st_12thpercentage']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Third Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="3sem"  value="<?php echo $row['st_3rdsem']?>" />
+                                                                    <h1>UG</h1>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Fourth Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="4sem" value="<?php echo $row['st_4thsem']?>" />
+                                                                    <label for="form-field-q1">Qualification</label>
+                                                                    <select name="ugqualification" class="form-control" id="form-field-q1">
+                                                                        <option value="be">B.E</option>
+                                                                        <option value="bt">B.Tech</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Fifth Semester</label>
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="5sem" value="<?php echo $row['st_5thsem']?>" />
+                                                                    <label for="form-field-b1">Branch</label>
+                                                                    <select name="ugbranch" class="form-control" id="form-field-b1">
+                                                                        <option></option>
+                                                                        <option value="cse">Computer Science Engineering</option>
+                                                                        <option value="it">Information Technology</option>
+                                                                        <option value="mech">Mechanical Engineering</option>
+                                                                        <option value="ece">Electronics and Communication Engineering</option>
+                                                                        <option value="eee">Electrical and Electronics Engineering</option>
+                                                                        <option value="eie">Electronics and Instrumentation Engineering</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Sixth Semester</label>
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="6sem" value="<?php echo $row['st_6thsem']?>" />
+                                                                    <label for="form-field-c1">Institution</label>
+
+                                                                    <select name="ugclgname" class="form-control" id="form-field-c1">
+                                                                        <option value="rmk">RMK Engineering College</option>
+                                                                        <option value="rmd">RMD Engineering COllege</option>
+                                                                        <option value="rmkcet">RMK College of Engineering and Technology</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Seventh Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="7sem" value="<?php echo $row['st_7thsem']?>" />
+                                                                    <label for="form-field-yop1">Year of Passing</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-yop1" placeholder="" name="ugyearofpass" value="<?php echo $row['st_ugyearofpassing']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Eigth Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="8sem" value="<?php echo $row['st_8thsem']?>" />
+                                                                    <label for="form-field-p1">Percentage/CGPA</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p1" placeholder="" name="ugcgpa" value="<?php echo $row['st_cgpa']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Standing Arrear</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="standarrears" value="<?php echo $row['st_standingarrears']?>" />
+                                                                    <label for="form-field-p2">First Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="1sem" value="<?php echo $row['st_1stsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">History of Arrear</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input type="text" id="form-field-p2" placeholder="" name="historyofarrears" value="<?php echo $row['st_historyofarrears']?>" />
+                                                                    <label for="form-field-p2">Second Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="2sem" value="<?php echo $row['st_2ndsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <h1>PG</h1>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-q1">Qualification</label>
-                                                                <select name="pgqualification" class="form-control" id="form-field-q1">
-                                                                    <option value="me">M.E</option>
-                                                                    <option value="mba">MBA</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label  for="form-field-b1">Branch</label>
-                                                                <select name="pgbranch" class="form-control" id="form-field-b1">
-                                                                    <option value="cse">Computer Science Engineering</option>
-                                                                    <option value="it">Information Technology</option>
-                                                                    <option value="mech">Mechanical Engineering</option>
-                                                                    <option value="ece">Electronics and Communication Engineering</option>
-                                                                    <option value="eee">Electrical and Electronics Engineering</option>
-                                                                    <option value="eie">Electronics and Instrumentation Engineering</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-c1">Institution</label>
-
-                                                                <select name="pgclgname" class="form-control" id="form-field-c1">
-                                                                    <option value="rmk">RMD Engineering College</option>
-                                                                    <option value="rmd">RMK Engineering COllege</option>
-                                                                    <option value="rmkcet">RMK College of Engineering and Technology</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-yop1">Year of Passing</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgyearofpass" type="text" id="form-field-yop1" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Third Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="3sem"  value="<?php echo $row['st_3rdsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p1">Percentage/CGPA</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgpercent" type="text" id="form-field-p1" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Fourth Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="4sem" value="<?php echo $row['st_4thsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">First Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgsem1" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Fifth Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="5sem" value="<?php echo $row['st_5thsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label disabled for="form-field-p2">Second Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgsem2" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Sixth Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="6sem" value="<?php echo $row['st_6thsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Third Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgsem3" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Seventh Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="7sem" value="<?php echo $row['st_7thsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Fourth Semester</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgsem4" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Eigth Semester</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="8sem" value="<?php echo $row['st_8thsem']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">Standing Arrear</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pgstandarrears" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">Standing Arrear</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="standarrears" value="<?php echo $row['st_standingarrears']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-p2">History of Arrear</label>
+                                                            <div class="form-group">
                                                                 <div>
-                                                                    <input name="pghistoryofarrears" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    <label for="form-field-p2">History of Arrear</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-p2" placeholder="" name="historyofarrears" value="<?php echo $row['st_historyofarrears']?>" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <h1>PG</h1>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-q1">Qualification</label>
+                                                                    <select name="pgqualification" class="form-control" id="form-field-q1">
+                                                                        <option value="me">M.E</option>
+                                                                        <option value="mba">MBA</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label  for="form-field-b1">Branch</label>
+                                                                    <select name="pgbranch" class="form-control" id="form-field-b1">
+                                                                        <option value="cse">Computer Science Engineering</option>
+                                                                        <option value="it">Information Technology</option>
+                                                                        <option value="mech">Mechanical Engineering</option>
+                                                                        <option value="ece">Electronics and Communication Engineering</option>
+                                                                        <option value="eee">Electrical and Electronics Engineering</option>
+                                                                        <option value="eie">Electronics and Instrumentation Engineering</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-c1">Institution</label>
+
+                                                                    <select name="pgclgname" class="form-control" id="form-field-c1">
+                                                                        <option value="rmk">RMD Engineering College</option>
+                                                                        <option value="rmd">RMK Engineering COllege</option>
+                                                                        <option value="rmkcet">RMK College of Engineering and Technology</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-yop1">Year of Passing</label>
+                                                                    <div>
+                                                                        <input name="pgyearofpass" type="text" id="form-field-yop1" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p1">Percentage/CGPA</label>
+                                                                    <div>
+                                                                        <input name="pgpercent" type="text" id="form-field-p1" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p2">First Semester</label>
+                                                                    <div>
+                                                                        <input name="pgsem1" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label disabled for="form-field-p2">Second Semester</label>
+                                                                    <div>
+                                                                        <input name="pgsem2" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p2">Third Semester</label>
+                                                                    <div>
+                                                                        <input name="pgsem3" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p2">Fourth Semester</label>
+                                                                    <div>
+                                                                        <input name="pgsem4" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p2">Standing Arrear</label>
+                                                                    <div>
+                                                                        <input name="pgstandarrears" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-p2">History of Arrear</label>
+                                                                    <div>
+                                                                        <input name="pghistoryofarrears" type="text" id="form-field-p2" placeholder="" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space-4"></div>
+
+                                                            <div class="space-4"></div>
+
                                                         </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="space-4"></div>
-
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="modal-footer">
-                                                                <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
-                                                                <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
-                                                <button class="btn btn-sm" data-dismiss="modal">
-                                                    <i class="ace-icon fa fa-times"></i>
-                                                    Cancel
-                                                </button>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
+                                                    <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
+                                                    <button class="btn btn-sm" data-dismiss="modal">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                        Cancel
+                                                    </button>
 
-                                                <button class="btn btn-sm btn-primary" name="academicdetails">
-                                                    <i class="ace-icon fa fa-check"></i>
-                                                    Save
-                                                </button>
-                                            </div></form>
+                                                    <button class="btn btn-sm btn-primary" name="academicdetails">
+                                                        <i class="ace-icon fa fa-check"></i>
+                                                        Save
+                                                    </button>
+                                                </div></form>
                                         </div>
                                     </div>
                                 </div>
@@ -2538,280 +2563,280 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                 <div id="modal-form2" class="modal" tabindex="-1">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-			<form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="blue bigger">Edit the following form fields</h4>
-                                            </div>
+                                            <form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="blue bigger">Edit the following form fields</h4>
+                                                </div>
 
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-7">
-                                                        <div class="form-group">
-                                                            <label for="form-field-fn">First Name</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fn" placeholder="" name="firstname" value="<?php echo $row['st_firstname'] ?>"/>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-fn">Middle Name</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fn" placeholder="" name="middlename" value="<?php echo $row['st_middlename']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-ln">Last Name</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-ln" placeholder="" name="lastname" value="<?php echo $row['st_lastname']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-gendre">Gender</label>
-                                                                <select class="form-control" name="gender" id="form-field-gendre">
-                                                                    <option value="m"><?php echo $row['st_gender']?></option>
-                                                                    <option value="f">Female</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-fan">Father Name</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fan" placeholder="" name="fathername" value="<?php echo $row['st_fathername']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-fan">Father Occupation</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fan" placeholder="" name="fatheroccupation" value="<?php echo $row['st_fatheroccupation']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-fan">Mother Name</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fan" placeholder="" name="mothername" value="<?php echo $row['st_mothername']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-fan">Mother Occupation</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fan" placeholder="" name="motheroccupation" value="<?php echo $row['st_motheroccupation']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="id-date-picker-1">Date of birth</label>
-                                                            <div>
-                                                                <input class="form-group" id="id-date-picker-1" type="text" name="dob" data-date-format="dd-mm-yyyy" value="<?php echo $row['st_dob']?>" />
-                                                                <span class="form-group">
-                                                    <i class="fa fa-calendar bigger-110"></i>
-                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                                <label for="form-field-na">Nationality</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-fan" placeholder="" name="nationality" value="<?php echo $row['st_nationality']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-caste">Caste</label>
-                                                                <select class="form-control" id="form-field-caste" name="caste" value="<?php echo $row['st_caste']?>">
-                                                                    <option value="bc">BC</option>
-                                                                    <option value="mbc">MBC</option>
-                                                                    <option value="obc">OBC</option>
-                                                                    <option value="fc">FC</option>
-                                                                    <option value="sc">SC</option>
-                                                                    <option value="st">ST</option>
-
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-ht">Home Town</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-ht" placeholder="" name="hometown" value="<?php echo $row['st_hometown']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-addr">Permanent Address(Line 1)</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-addr" placeholder="" name="premanaddress1" value="<?php echo $row['st_address1']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-addr">Permanent Address(Line 2)</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-addr" placeholder="" name="premanaddress2" value="<?php echo $row['st_address2']?>" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-city">City</label>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-7">
+                                                            <div class="form-group">
+                                                                <label for="form-field-fn">First Name</label>
                                                                 <div>
-                                                                    <input type="text" id="form-field-city" placeholder="" name="city" value="<?php echo $row['st_city']?>" />
+                                                                    <input type="text" id="form-field-fn" placeholder="" name="firstname" value="<?php echo $row['st_firstname'] ?>"/>
+
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-state">State</label>
-                                                                <select class="form-control" name="state" value="<?php echo $row['st_state']?>" id="form-field-state">
-                                                                    <option value="t">Tamil Nadu</option>
-                                                                    <option value="a">Andhra Pradesh</option>
-                                                                    <option value="k">Kerala</option>
-                                                                </select>
+                                                            <div class="form-group">
+                                                                <label for="form-field-fn">Middle Name</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fn" placeholder="" name="middlename" value="<?php echo $row['st_middlename']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-country">Country</label>
-                                                                <select disabled class="form-control" id="form-field-country">
-                                                                    <option value="i">India</option>
-                                                                </select>
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-ln">Last Name</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-ln" placeholder="" name="lastname" value="<?php echo $row['st_lastname']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="form-field-pc">Pin Code</label>
-
-                                                            <div>
-                                                                <input type="text" id="form-field-pc" placeholder="" name="pincode" value="<?php echo $row['st_posatlcode']?>" />
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-gendre">Gender</label>
+                                                                    <select class="form-control" name="gender" id="form-field-gendre">
+                                                                        <option value="m"><?php echo $row['st_gender']?></option>
+                                                                        <option value="f">Female</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="form-field-l">Landline Number</label>
-                                                            <div>
-                                                                <input type="text" id="form-field-l" placeholder="" name="landline" value="<?php echo $row['st_landline']?>" />
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-fan">Father Name</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fan" placeholder="" name="fathername" value="<?php echo $row['st_fathername']?>" />
+                                                                </div>
                                                             </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-fan">Father Occupation</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fan" placeholder="" name="fatheroccupation" value="<?php echo $row['st_fatheroccupation']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-fan">Mother Name</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fan" placeholder="" name="mothername" value="<?php echo $row['st_mothername']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-fan">Mother Occupation</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fan" placeholder="" name="motheroccupation" value="<?php echo $row['st_motheroccupation']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="id-date-picker-1">Date of birth</label>
+                                                                <div>
+                                                                    <input class="form-group" id="id-date-picker-1" type="text" name="dob" data-date-format="dd-mm-yyyy" value="<?php echo $row['st_dob']?>" />
+                                                                    <span class="form-group">
+                                                    <i class="fa fa-calendar bigger-110"></i>
+                                                </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-na">Nationality</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-fan" placeholder="" name="nationality" value="<?php echo $row['st_nationality']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-caste">Caste</label>
+                                                                    <select class="form-control" id="form-field-caste" name="caste" value="<?php echo $row['st_caste']?>">
+                                                                        <option value="bc">BC</option>
+                                                                        <option value="mbc">MBC</option>
+                                                                        <option value="obc">OBC</option>
+                                                                        <option value="fc">FC</option>
+                                                                        <option value="sc">SC</option>
+                                                                        <option value="st">ST</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-ht">Home Town</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-ht" placeholder="" name="hometown" value="<?php echo $row['st_hometown']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-addr">Permanent Address(Line 1)</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-addr" placeholder="" name="premanaddress1" value="<?php echo $row['st_address1']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-addr">Permanent Address(Line 2)</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-addr" placeholder="" name="premanaddress2" value="<?php echo $row['st_address2']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-city">City</label>
+                                                                    <div>
+                                                                        <input type="text" id="form-field-city" placeholder="" name="city" value="<?php echo $row['st_city']?>" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-state">State</label>
+                                                                    <select class="form-control" name="state" value="<?php echo $row['st_state']?>" id="form-field-state">
+                                                                        <option value="t">Tamil Nadu</option>
+                                                                        <option value="a">Andhra Pradesh</option>
+                                                                        <option value="k">Kerala</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-country">Country</label>
+                                                                    <select disabled class="form-control" id="form-field-country">
+                                                                        <option value="i">India</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-pc">Pin Code</label>
+
+                                                                <div>
+                                                                    <input type="text" id="form-field-pc" placeholder="" name="pincode" value="<?php echo $row['st_posatlcode']?>" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="form-field-l">Landline Number</label>
+                                                                <div>
+                                                                    <input type="text" id="form-field-l" placeholder="" name="landline" value="<?php echo $row['st_landline']?>" />
+                                                                </div>
+                                                            </div>
+
+
                                                         </div>
-
-
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="modal-footer">
-                                                                <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
-                                                                <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
-                                                <button class="btn btn-sm" data-dismiss="modal">
-                                                    <i class="ace-icon fa fa-times"></i>
-                                                    Cancel
-                                                </button>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
+                                                    <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
+                                                    <button class="btn btn-sm" data-dismiss="modal">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                        Cancel
+                                                    </button>
 
-                                                <button class="btn btn-sm btn-primary" name="personaldetails">
-                                                    <i class="ace-icon fa fa-check"></i>
-                                                    Save
-                                                </button>
-                                            </div></form>
+                                                    <button class="btn btn-sm btn-primary" name="personaldetails">
+                                                        <i class="ace-icon fa fa-check"></i>
+                                                        Save
+                                                    </button>
+                                                </div></form>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="modal-form1" class="modal" tabindex="-1">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-				<form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="blue bigger">Edit the following form fields</h4>
-                                            </div>
+                                            <form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="blue bigger">Edit the following form fields</h4>
+                                                </div>
 
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-7">
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blue">University Register Number</label>
-                                                            <div>
-                                                                <input type="text" disabled id="control-label bolder blue" placeholder="" name="univregno" value="<?php echo $row['st_roll'] ?>" />
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-7">
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blue">University Register Number</label>
+                                                                <div>
+                                                                    <input type="text" disabled id="control-label bolder blue" placeholder="" name="univregno" value="<?php echo $row['st_roll'] ?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Full Name</label>
-                                                            <div>
-                                                                <input type="text" id="control-label bolder blu" name="fullname" placeholder="" value="<?php echo $row['st_name'] ?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Full Name</label>
+                                                                <div>
+                                                                    <input type="text" id="control-label bolder blu" name="fullname" placeholder="" value="<?php echo $row['st_name'] ?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder bl">Mobile Number</label>
-                                                            <div>
-                                                                <input type="text" id="control-label bolder bl" name="phoneno" placeholder="" value="<?php echo $row['st_phone'] ?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder bl">Mobile Number</label>
+                                                                <div>
+                                                                    <input type="text" id="control-label bolder bl" name="phoneno" placeholder="" value="<?php echo $row['st_phone'] ?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder b">Email-Id</label>
-                                                            <div>
-                                                                <input type="text" id="control-label bolder b" name="emailid" placeholder="" value="<?php echo $row['st_email'] ?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder b">Email-Id</label>
+                                                                <div>
+                                                                    <input type="text" id="control-label bolder b" name="emailid" placeholder="" value="<?php echo $row['st_email'] ?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Current Cgpa</label>
-                                                            <div>
-                                                                <input type="text" id="control-label bolder blu" name="cgpa" placeholder="" value="<?php echo $row['st_cgpa'] ?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Current Cgpa</label>
+                                                                <div>
+                                                                    <input type="text" id="control-label bolder blu" name="cgpa" placeholder="" value="<?php echo $row['st_cgpa'] ?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <label for="form-field-c1">College Name</label>
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <label for="form-field-c1">College Name</label>
 
-                                                                <select class="form-control" name="collegename" id="form-field-c1" value="<?php echo $row['st_collegename'] ?>">
-                                                                    <option value="rmk">RMK Engineering College</option>
-                                                                    <option value="rmd">RMD Engineering College</option>
-                                                                    <option value="rmkcet">RMK College of Engineering and Technology</option>
-                                                                </select>
+                                                                    <select class="form-control" name="collegename" id="form-field-c1" value="<?php echo $row['st_collegename'] ?>">
+                                                                        <option value="rmk">RMK Engineering College</option>
+                                                                        <option value="rmd">RMD Engineering College</option>
+                                                                        <option value="rmkcet">RMK College of Engineering and Technology</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder b">Anna University</label>
-                                                            <div>
-                                                                <input type="text" disabled id="control-label bolder blu" placeholder="" value="Anna University" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder b">Anna University</label>
+                                                                <div>
+                                                                    <input type="text" disabled id="control-label bolder blu" placeholder="" value="Anna University" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="modal-footer">
-                                                                <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
-                                                                <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
+                                                    <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
 
-                                                <button class="btn btn-sm" data-dismiss="modal">
-                                                    <i class="ace-icon fa fa-times"></i>
-                                                    Cancel
-                                                </button>
+                                                    <button class="btn btn-sm" data-dismiss="modal">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                        Cancel
+                                                    </button>
 
-                                                <button class="btn btn-sm btn-primary" name="profile">
-                                                    <i class="ace-icon fa fa-check"></i>
-                                                    Save
-                                                </button>
-                                            </div></form>
+                                                    <button class="btn btn-sm btn-primary" name="profile">
+                                                        <i class="ace-icon fa fa-check"></i>
+                                                        Save
+                                                    </button>
+                                                </div></form>
                                         </div>
                                     </div>
                                 </div>
@@ -2819,82 +2844,82 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
                                 <div id="modal-form5" class="modal" tabindex="-1">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-			<form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="blue bigger">Edit the following form fields</h4>
-                                            </div>
+                                            <form class="modal-content" action="profile.php" method="get" enctype="multipart/form-data">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="blue bigger">Edit the following form fields</h4>
+                                                </div>
 
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-7">
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blue">English Percentage</label>
-                                                            <div>
-                                                                <input type="text" name="engpercent" id="control-label bolder blue" placeholder="" value="<?php echo $row['st_english']?>" />
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-7">
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blue">English Percentage</label>
+                                                                <div>
+                                                                    <input type="text" name="engpercent" id="control-label bolder blue" placeholder="" value="<?php echo $row['st_english']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Quantitative Percentage</label>
-                                                            <div>
-                                                                <input type="text" name="quantpercent" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_quantitative']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Quantitative Percentage</label>
+                                                                <div>
+                                                                    <input type="text" name="quantpercent" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_quantitative']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder bl">Logical Percentage</label>
-                                                            <div>
-                                                                <input type="text" name="logicalpercent" id="control-label bolder bl" placeholder="" value="<?php echo $row['st_logical']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder bl">Logical Percentage</label>
+                                                                <div>
+                                                                    <input type="text" name="logicalpercent" id="control-label bolder bl" placeholder="" value="<?php echo $row['st_logical']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder b">Overall Average</label>
-                                                            <div>
-                                                                <input type="text" name="overallpercent" id="control-label bolder b" placeholder="" value="<?php echo $row['st_overall']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder b">Overall Average</label>
+                                                                <div>
+                                                                    <input type="text" name="overallpercent" id="control-label bolder b" placeholder="" value="<?php echo $row['st_overall']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Percentage</label>
-                                                            <div>
-                                                                <input type="text" name="percent" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_percentage']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Percentage</label>
+                                                                <div>
+                                                                    <input type="text" name="percent" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_percentage']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Candidate ID</label>
-                                                            <div>
-                                                                <input type="text" name="candidateid" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_candidateid']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Candidate ID</label>
+                                                                <div>
+                                                                    <input type="text" name="candidateid" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_candidateid']?>" />
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <label for="control-label bolder blu">Signature</label>
-                                                            <div>
-                                                                <input type="text" name="signature" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_signature']?>" />
+                                                            <div class="form-group">
+                                                                <label for="control-label bolder blu">Signature</label>
+                                                                <div>
+                                                                    <input type="text" name="signature" id="control-label bolder blu" placeholder="" value="<?php echo $row['st_signature']?>" />
+                                                                </div>
                                                             </div>
+
+
                                                         </div>
-
-
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="modal-footer">
-                                                                <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
-                                                                <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
-                                                <button class="btn btn-sm" data-dismiss="modal">
-                                                    <i class="ace-icon fa fa-times"></i>
-                                                    Cancel
-                                                </button>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="rollno" value="<?php echo $row['st_roll'] ?>"/>
+                                                    <input type="hidden" name="tname" value="<?php echo $row_short['table_name']; ?>"/>
+                                                    <button class="btn btn-sm" data-dismiss="modal">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                        Cancel
+                                                    </button>
 
-                                                <button class="btn btn-sm btn-primary" name="amcatscore">
-                                                    <i class="ace-icon fa fa-check"></i>
-                                                    Save
-                                                </button>
-                                            </div></form>
+                                                    <button class="btn btn-sm btn-primary" name="amcatscore">
+                                                        <i class="ace-icon fa fa-check"></i>
+                                                        Save
+                                                    </button>
+                                                </div></form>
                                         </div>
                                     </div>
                                 </div>
@@ -3423,33 +3448,6 @@ if(isset($_GET['roll']) && isset($_SESSION['user_role'])=='admin' )
 
                                 }
                             });
-                        });
-                        $('#bootbox-search').click(function(event){
-
-
-
-                            var bld = $('#tag1').val();
-                            if(bld=='')
-                            {
-
-                                bootbox.dialog({
-                                    message: "Please enter the search value",
-                                    buttons: {
-                                        "success" : {
-                                            "label" : "OK",
-                                            "className" : "btn-sm btn-primary"
-                                        }
-                                    }
-
-                                } );
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            else
-                            {
-
-
-                            }
                         });
                     </script>
 </body>

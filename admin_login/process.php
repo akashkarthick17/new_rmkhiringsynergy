@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+ob_start();
+
+
+
 if(isset($_GET['pass'])  && isset($_SESSION['user_role'])=='admin' ){
 
 
