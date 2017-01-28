@@ -6,15 +6,15 @@ session_start();
 $_SESSION['roll']=null;
 
 
-if(! isset($_SESSION['user']) && $_SESSION['user']==null){
+if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['user_role'])!='admin'){
 
-    header("Location: ../login.html");
+    header("Location: ../login.php");
 
 
 }
 
 
-if (isset($_GET['profile'])) {
+if (isset($_GET['profile'])&& isset($_SESSION['user_role'])=='admin') {
 
     include "../connect.php";
 
@@ -48,7 +48,7 @@ if (isset($_GET['profile'])) {
 }
 
 
-if (isset($_GET['personaldetails'])) {
+if (isset($_GET['personaldetails'])&& isset($_SESSION['user_role'])=='admin') {
 
     include "../connect.php";
 
@@ -105,7 +105,7 @@ st_state='{$state}',st_posatlcode='{$pincode}',st_landline='{$landline}' WHERE s
 
 
 
-if (isset($_GET['academicdetails'])) {
+if (isset($_GET['academicdetails'])&& isset($_SESSION['user_role'])=='admin') {
 
     include "../connect.php";
 
@@ -178,7 +178,7 @@ st_pg4thsem='{$pgsem4}',st_standingarrears='{$pgstandarrears}',st_historyofarrea
 
 
 
-if (isset($_GET['amcatscore'])) {
+if (isset($_GET['amcatscore'])&& isset($_SESSION['user_role'])=='admin') {
 
     include "../connect.php";
 
@@ -399,7 +399,7 @@ st_candidateid='{$candidateid}',st_signature='{$signature}' WHERE st_roll='{$rol
 <body class="no-skin">
 <?php
 
-if(isset($_FILES['image'])){
+if(isset($_FILES['image'])&& isset($_SESSION['user_role'])=='admin'){
 
 
 
@@ -455,7 +455,7 @@ if(isset($_FILES['image'])){
 
 }
 
-if(isset($_GET['roll']))
+if(isset($_GET['roll'])&& isset($_SESSION['user_role'])=='admin')
 {
 
 
@@ -1079,7 +1079,7 @@ if(isset($_GET['roll']))
                                         <?php
 
 
-                                        if(isset($_SESSION['roll'])) {
+                                        if(isset($_SESSION['roll'])&& isset($_SESSION['user_role'])=='admin') {
 
 
                                             include "../connect.php";
@@ -1164,7 +1164,7 @@ if(isset($_GET['roll']))
 
                                 <?php
 
-                                if(isset($_SESSION['roll'])){
+                                if(isset($_SESSION['roll'])&& isset($_SESSION['user_role'])=='admin'){
 
 
                                 include "../connect.php";
