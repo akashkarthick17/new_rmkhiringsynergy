@@ -147,7 +147,7 @@ function updateSlider(){
 
 
 
-if(isset($_GET['something'])){
+if(isset($_GET['filter_job'])){
 
 
 
@@ -245,7 +245,7 @@ if(isset($_GET['something'])){
 
 
 
-
+/*
 
         set_time_limit(0);
 
@@ -272,7 +272,7 @@ if(isset($_GET['something'])){
 
         }
 
-
+*/
 
 
 

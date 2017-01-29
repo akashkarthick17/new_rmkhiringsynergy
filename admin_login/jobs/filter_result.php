@@ -950,11 +950,11 @@ if(isset($_GET['filter_result'])){
 
                                                             <tbody>
 
-                                                            <!--                                                            eligible
+
                                                             <?php
 
 
-                                                            if (isset($_GET['jid']) && $_GET['flag']==0 && isset($_SESSION['user_role'])=='admin' ) {
+                                                            if (isset($_GET['jid']) && isset($_SESSION['user_role'])=='admin' ) {
 
                                                                 $jid = $_GET['jid'];
 
@@ -970,7 +970,7 @@ if(isset($_GET['filter_result'])){
 
                                                                 while ($row_job = mysqli_fetch_assoc($result_job)) {
 
-                                                                    ?>-->
+                                                                    ?>
 
 
                                                                     <tr>
@@ -983,32 +983,32 @@ if(isset($_GET['filter_result'])){
 
 
                                                                         <td>
-                                                                            4005     <!--<?php echo $row_job['st_roll'] ?>-->
+                                                                        <?php echo $row_job['st_roll'] ?>
                                                                         </td>
 
                                                                         <td>
-                                                                            Akash   <!--<?php echo $row_job['st_name'] ?>-->
+                                                                       <?php echo $row_job['st_name'] ?>
                                                                         </td>
 
-                                                                        <td class="  "> akash@gmail.com <!--<?php echo $row_job['st_email'] ?>--></td>
-                                                                        <td> 1234567890<!--<?php echo $row_job['st_phone'] ?>--> </td>
+                                                                        <td class="  ">  <?php echo $row_job['st_email'] ?></td>
+                                                                        <td> <?php echo $row_job['st_phone'] ?> </td>
 
                                                                         <td class="  ">
-                                                                            <span class="label label-sm label-warning">8.0 <!--<?php echo $row_job['st_cgpa'] ?>--></span>
+                                                                            <span class="label label-sm label-warning"> <?php echo $row_job['st_cgpa'] ?></span>
                                                                         </td>
 
 
                                                                     </tr>
 
 
-                                                                 <--   <?php
+                                                                   <?php
 
                                                                 }
 
                                                             }
 
 
-                                                            ?>-->
+                                                            ?>
 
                                                             </tbody>
                                                         </table>
