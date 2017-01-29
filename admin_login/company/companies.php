@@ -697,7 +697,7 @@ die(" " . mysqli_error($connect));
                     </li>
 
                     <li class="">
-                        <a href="../Status.php">
+                        <a href="../status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Status
                         </a>
@@ -980,7 +980,7 @@ die(" " . mysqli_error($connect));
 <script src="../../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
 <script src="../../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+<script src="../../vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
 <script src="../../vendors/jszip/dist/jszip.min.js"></script>
 <script src="../../vendors/pdfmake/build/pdfmake.min.js"></script>
 <script src="../../vendors/pdfmake/build/vfs_fonts.js"></script>
@@ -1009,7 +1009,7 @@ die(" " . mysqli_error($connect));
 <script type="text/javascript">
 
 
-    ;
+
 
 
 
