@@ -672,7 +672,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
                     </li>
 
                     <li class="">
-                        <a href="../Status.php">
+                        <a href="../status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Status
                         </a>
@@ -1022,6 +1022,12 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
                                                                class="dynamic-table table table-striped table-bordered table-hover">
                                                             <thead>
                                                             <tr>
+                                                                <th class="center">
+                                                                    <label class="pos-rel">
+                                                                        <input type="checkbox" class="ace" />
+                                                                        <span class="lbl"></span>
+                                                                    </label>
+                                                                </th>
                                                                 <th>
                                                                     Roll No
                                                                 </th>
@@ -1065,6 +1071,12 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
 
 
                                                                     <tr>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                <input type="checkbox" class="ace" />
+                                                                                <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
                                                                         <td>
                                                                             <?php echo $row_job['st_roll'] ?>
                                                                         </td>
@@ -1120,6 +1132,12 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
 
 
                                                                     <tr>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                <input type="checkbox" class="ace" />
+                                                                                <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
                                                                         <td>
                                                                             <?php echo $row_job['st_roll'] ?>
                                                                         </td>
@@ -1172,6 +1190,12 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
 
 
                                                                     <tr>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                <input type="checkbox" class="ace" />
+                                                                                <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
                                                                         <td>
                                                                             <?php echo $row_job['st_roll'] ?>
                                                                         </td>
@@ -1304,9 +1328,9 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
                 .DataTable({
                     bAutoWidth: false,
                     "aoColumns": [
-
-                        null, null, null, null, null
-
+                        { "bSortable": false },
+                        null, null, null,
+                        { "bSortable": false }
                     ],
                     "aaSorting": [],
 
@@ -1317,9 +1341,9 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
 
                     //,
                     //"sScrollY": "200px",
-                    "bPaginate": false,
+                    //"bPaginate": false,
 
-                    "sScrollX": "100%"
+                    //"sScrollX": "100%"
                     //"sScrollXInner": "120%",
                     //"bScrollCollapse": true,
                     //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
@@ -1416,8 +1440,75 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
             });
         }, 500);
 
+        myTable.on( 'select', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', true);
+            }
+        } );
+        myTable.on( 'deselect', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', false);
+            }
+        } );
 
-        //table 1
+        //table checkboxes
+        $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
+
+
+
+        //select/deselect all rows according to table header checkbox
+        $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//checkbox inside "TH" table header
+
+            $('#dynamic-table').find('tbody > tr').each(function(){
+                var row = this;
+                if(th_checked) myTable.row(row).select();
+                else  myTable.row(row).deselect();
+            });
+        });
+
+
+        //select/deselect a row when the checkbox is checked/unchecked
+        $('#dynamic-table').on('click', 'tr input[type=checkbox]' , function(){
+            var $row = $(this).closest('tr');
+            if(this.checked) $row.addClass("selected highlight");
+            else $row.removeClass("selected highlight");
+        });
+
+
+
+        $(document).on('click', '#dynamic-table .dropdown-toggle', function(e) {
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        //And for the first simple table, which doesn't have TableTools or dataTables
+        //select/deselect all rows according to table header checkbox
+        var active_class = 'active';
+
+        $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//checkbox inside "TH" table header
+
+            $(this).closest('table').find('tbody > tr').each(function(){
+                var row = this;
+                if(th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
+                else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
+            });
+        });
+
+        //select/deselect a row when the checkbox is checked/unchecked
+        $('#simple-table').on('click', 'td input[type=checkbox]' , function(){
+            var $row = $(this).closest('tr');
+            if($row.is('.detail-row ')) return;
+            if(this.checked) $row.addClass(active_class);
+            else $row.removeClass(active_class);
+        });
+
+
+
+
+
 
 
     });
