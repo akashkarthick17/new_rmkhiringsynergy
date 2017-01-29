@@ -1102,6 +1102,55 @@ if(isset($_GET['filter_result'])){
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     jQuery(function($) {
+
+
+
+
+        var myTable =
+            $('#dynamic-table')
+            //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+                .DataTable( {
+                    bAutoWidth: false,
+                    "aoColumns": [
+                        { "bSortable": false },
+                        null, null, null, null,null,
+                        { "bSortable": false }
+                    ],
+                    "aaSorting": []
+
+
+
+                    //"bProcessing": true,
+                    //"bServerSide": true,
+                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+
+                    //,
+                    //"sScrollY": "200px",
+                   //"bPaginate": false
+
+                    //"sScrollX": "100%",
+                    //"sScrollXInner": "120%",
+                    //"bScrollCollapse": true,
+                    //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+
+                    //"iDisplayLength": 50
+
+//
+//                    select: {
+//                        style: 'multi'
+//                    }
+                } );
+
+
+
+
+
+
+
+
+
+
         $('#id-disable-check').on('click', function() {
             var inp = $('#form-input-readonly').get(0);
             if(inp.hasAttribute('disabled')) {
