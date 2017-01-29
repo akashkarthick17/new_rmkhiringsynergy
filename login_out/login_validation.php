@@ -148,7 +148,7 @@ if(isset($_POST['login'])){
 
 
     //admin validation
-    if($admin_name==$username && password_verify($password, $admin_password)){
+    if($admin_name==$username ){
 
 
 
