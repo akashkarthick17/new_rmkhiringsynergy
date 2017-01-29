@@ -147,7 +147,7 @@ function updateSlider(){
 
 
 
-if(isset($_GET['something'])){
+if(isset($_GET['filter_result'])){
 
 
 
@@ -817,9 +817,9 @@ if(isset($_GET['something'])){
                     </li>
 
                     <li class="">
-                        <a href="../Status.php">
+                        <a href="../inbox.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Status
+                            Inbox
                         </a>
 
                         <b class="arrow"></b>
@@ -869,17 +869,17 @@ if(isset($_GET['something'])){
                 <form class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form action="job_filter.php" method="get" >
+                        <form action="filter_result.php" method="get" >
 
-                            <?php
-
-
+                            
 
 
 
 
 
-                            $job_title=$_GET['job_title'];
+
+
+        <!--                    $job_title=$_GET['job_title'];
                             $company_id=$_GET['company_id'];
                             $venue=$_GET['venue'];
                             $salary=$_GET['salary'];
@@ -890,26 +890,15 @@ if(isset($_GET['something'])){
                             $job_description=$_GET['job_description'];
                             $job_type=$_GET['job_type'];
                             $skill_set=$_GET['skill_set'];
-                            $sort=strtotime($apply_before);
+                            $sort=strtotime($apply_before);               -->
 
 
 
 
-                            ?>
+                           
 
 
 
-                            <input type="hidden" name="job_title"  value="<?php echo $job_title ?>">
-                            <input type="hidden" name="year_of_graduation" value="<?php echo $year_of_graduation ?>">
-                            <input type="hidden" name="company_id" value="<?php echo $company_id ?>">
-                            <input type="hidden" name="venue" value="<?php echo $venue ?>">
-                            <input type="hidden" name="joining_location" value="<?php echo $joining_location ?>">
-                            <input type="hidden" name="job_description" value="<?php echo $job_description?>">
-                            <input type="hidden" name="campus_date" value="<?php echo $campus_date ?>">
-                            <input type="hidden" name="apply_before" value="<?php echo $apply_before ?>">
-                            <input type="hidden" name="salary" value="<?php echo $salary ?>">
-                            <input type="hidden" name="job_type" value="<?php echo $job_type ?>">
-                            <input type="hidden" name="skill_set" value="<?php echo $skill_set ?>">
 
 
 
@@ -923,157 +912,114 @@ if(isset($_GET['something'])){
 
 
 
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-
-                                    <div class="widget-box widget-color-orange" id="widget-box-2">
-                                        <div class="widget-header widget-header-small">
-                                            <h6 class="widget-title">
-                                                UG Candidates
-                                            </h6>
-                                        </div>
-                                        <div class="widget-body">
-                                            <div class="widget-main">
-                                                <div id="fuelux-wizard-container">
-
-                                                    <div class="step-content pos-rel">
-
-
-                                                        <div class="row">
-
-                                                            <div class="col-xs-8 col-sm-5">
-
-                                                                <h5><label class="control-label bolder orange"for="form-field-select-4">Select Branch</label></h5>
-
-                                                                <div >
-                                                                    <select multiple="" name="ugbranch[]" class="chosen-select  form-control" id="tag1" data-placeholder="Choose a Branch...">
-                                                                        <option value="all">All</option>
-                                                                        <option value="cse">Computer science and Engineering</option>
-                                                                        <option value="eee">Electrical and Electronic Engineering</option>
-                                                                        <option value="eie">Electrical and Intrumentation Engineering</option>
-
-                                                                        <option value="it">Information Technology</option>
-                                                                        <option value="ece">Electrical and Communicaton Engineering</option>
-                                                                    </select>
-                                                                </div>
-
-
-
-
-
-
-                                                            </div>
-
-                                                        </div>
-
-
-
-                                                        <div class="space-16"></div>
-
-                                                        <div class="row">
-
-                                                            <div class="col-xs-12 col-sm-6">
-
-
-
-                                                                <h5 class="orange bolder smaller">CGPA</h5>
-                                                                <input type="text"  name="ugcgpa" value="0" id="slide-text1" class="col-xs-1">
-                                                                <div id="slider-eq1" class="col-xs-12 col-md-10 col-sm-8">
-                                                                    <span class="ui-slider-orange">0</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-
-                                    <div class="widget-box widget-color-blue" id="widget-box-2">
-                                        <div class="widget-header widget-header-small">
-                                            <h6 class="widget-title">
-                                                UG Semester wise CGPA
-                                            </h6>
-                                        </div>
-                                        <div class="widget-body">
-                                            <div class="widget-main">
-                                                <div id="fuelux-wizard-container">
-
-                                                    <div class="step-content pos-rel">
-
-
-                                                        <div class="row">
-                                                            <div class="col-xs-8 col-sm-5">
-                                                                <h5><label class="control-label bolder blue"for="form-field-select-2 slider-fill-mini">Select 12th Percentage</label></h5>
-                                                                <input type="text" name="12percentage"  value="0" id="slide-text2" class="col-xs-1">
-                                                                <div id="slider-eq2" class="col-xs-12 col-md-10 col-sm-8">
-                                                                    <span class="ui-slider-blue">0</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xs-8 col-sm-5">
-                                                                <h5><label class="control-label bolder blue"for="form-field-select-2 slider-fill-mini">Select 10th Percentage</label></h5>
-                                                                <input type="text" name="10percentage"  value="0" id="slide-text3" class="col-xs-1">
-                                                                <div id="slider-eq3" class="col-xs-12 col-md-10 col-sm-8">
-                                                                    <span class="ui-slider-blue">0</span>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-8 col-sm-5">
-                                                                <h5><label class="control-label bolder blue" for="form-field-select-3">Standing Arrears</label></h5>
-
-                                                                <select class="chosen-select form-control" name="standingarrears" id="form-field-select-3" data-placeholder="Please Select...">
-                                                                    <option value="0">Nil</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
-                                                                    <option value="6">6</option>
-                                                                    <option value="7">7</option>
-                                                                    <option value="8">8</option>
-                                                                    <option value="9">9</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-xs-8 col-sm-5">
-                                                                <h5><label class="control-label bolder blue" for="form-field-select-3">History of Arrears</label></h5>
-                                                                <input type="text"  name="historyofarrears" value="0" id="slide-text5" class="col-xs-1">
-                                                                <div id="slider-eq5" class="col-xs-12 col-md-10 col-sm-8">
-                                                                    <span class="ui-slider-blue">0</span>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-
-
-
-
-
+                            </div> <div class="table-header">
+                                                        Eligible Students List
                                                     </div>
 
 
+                                                    <div>
+                                                        <table id="dynamic-table"
+                                                               class="dynamic-table table table-striped table-bordered table-hover">
+                                                            <thead>
+                                                            <tr>
+                                            		<th class="center">
+                                                		   <label class="pos-rel">
+                                                    		    <input type="checkbox" class="ace" />
+                                                    		  <span class="lbl"></span>
+                                                		  </label>
+                                            		</th>
+
+                                                                <th>
+                                                                    Roll No
+                                                                </th>
+                                                                <th>Name</th>
+                                                                <th>Email</th>
 
 
-                                                </div>
+                                                                <th>
+                                                                    <i class="ace-icon fa fa-phone bigger-110   "></i>
+                                                                    Phone
+                                                                </th>
+                                                                <th class="  ">CGPA</th>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+	
+
+
+                                                            </tr>
+                                                            </thead>
+
+                                                            <tbody>
+
+                                                            <!--                                                            eligible
+                                                            <?php
+
+
+                                                            if (isset($_GET['jid']) && $_GET['flag']==0 && isset($_SESSION['user_role'])=='admin' ) {
+
+                                                                $jid = $_GET['jid'];
+
+                                                                include "../connect.php";
+                                                                $query_eligible_year = "SELECT * FROM jobs WHERE job_id='$jid'";
+                                                                $result_eligible_year = mysqli_query($connect, $query_eligible_year);
+                                                                $row_eligible_year = mysqli_fetch_assoc($result_eligible_year);
+
+                                                                $year_of_gradudation = $row_eligible_year['year_of_graduation'];
+
+                                                                $query_job = "SELECT * FROM students_" . $year_of_gradudation . " WHERE  _" . $jid . "='eligible' OR _" . $jid . "='accepted'";
+                                                                $result_job = mysqli_query($connect, $query_job);
+
+                                                                while ($row_job = mysqli_fetch_assoc($result_job)) {
+
+                                                                    ?>-->
+
+
+                                                                    <tr>
+                                            		<td class="center">
+                                                			<label class="pos-rel">
+                                                    				<input type="checkbox" class="ace" />
+                                                    				<span class="lbl"></span>
+                                                			</label>
+                                            		</td>
+
+
+                                                                        <td>
+                                                                            4005     <!--<?php echo $row_job['st_roll'] ?>-->
+                                                                        </td>
+
+                                                                        <td>
+                                                                            Akash   <!--<?php echo $row_job['st_name'] ?>-->
+                                                                        </td>
+
+                                                                        <td class="  "> akash@gmail.com <!--<?php echo $row_job['st_email'] ?>--></td>
+                                                                        <td> 1234567890<!--<?php echo $row_job['st_phone'] ?>--> </td>
+
+                                                                        <td class="  ">
+                                                                            <span class="label label-sm label-warning">8.0 <!--<?php echo $row_job['st_cgpa'] ?>--></span>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+
+                                                                 <--   <?php
+
+                                                                }
+
+                                                            }
+
+
+                                                            ?>-->
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+
                             <div class="space-16"></div>
                             <div class="center ">
-                                <button name="filter_job" id="bootbox-confirm" type="submit" class="btn btn-lg btn-success">
+                                <button name="filter_result" id="bootbox-confirm" type="submit" class="btn btn-lg btn-success">
                                     <i class="ace-icon fa fa-check"></i>
-                                    Filter
+                                    Confirm Job Post
                                 </button>
 
                             </div>
@@ -1141,7 +1087,7 @@ if(isset($_GET['something'])){
 <script src="../assets/js/jquery-ui.custom.min.js"></script>
 <script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="../assets/js/chosen.jquery.min.js"></script>
-<script src="../assets/js/spStatus.min.js"></script>
+<script src="../assets/js/spinbox.min.js"></script>
 <script src="../assets/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/js/bootstrap-timepicker.min.js"></script>
 <script src="../assets/js/moment.min.js"></script>
@@ -1546,7 +1492,7 @@ if(isset($_GET['something'])){
 
         $('#spinner1').ace_spinner({value:0,min:0,max:200,step:10, btn_up_class:'btn-info' , btn_down_class:'btn-info'})
             .closest('.ace-spinner')
-            .on('changed.fu.spStatus', function(){
+            .on('changed.fu.spinbox', function(){
                 //console.log($('#spinner1').val())
             });
         $('#spinner2').ace_spinner({value:0,min:0,max:10000,step:100, touch_spinner: true, icon_up:'ace-icon fa fa-caret-up bigger-110', icon_down:'ace-icon fa fa-caret-down bigger-110'});

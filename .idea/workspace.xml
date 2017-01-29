@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2935bb3-3be1-4bbc-959c-c4ae5bee5869" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_login/profile/profile.php" afterPath="$PROJECT_DIR$/admin_login/profile/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_login/jobs/job_filter.php" afterPath="$PROJECT_DIR$/admin_login/jobs/job_filter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_login/status.php" afterPath="$PROJECT_DIR$/admin_login/status.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="process.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="process.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin_login/process.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <marker date="1485614118053" expanded="true" signature="352:407" ph="SELECT * FRO... login_admin" />
               </folding>
@@ -32,79 +34,85 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_company.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/company/create_company.php">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student_login/profile/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="1062" column="0" lean-forward="false" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
+            <state relative-caret-position="7569">
+              <caret line="600" column="4" lean-forward="false" selection-start-line="600" selection-start-column="4" selection-end-line="600" selection-end-column="4" />
               <folding>
-                <marker date="1485614118051" expanded="true" signature="4963:5098" ph="INSERT INTO company_list... " />
-                <marker date="1485614118051" expanded="true" signature="7439:7462" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118051" expanded="true" signature="7763:7836" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118051" expanded="true" signature="9090:9113" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118051" expanded="true" signature="9462:9476" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118051" expanded="true" signature="12823:12873" ph="select * fro... login_admin" />
-                <marker date="1485614118051" expanded="true" signature="37231:37263" ph="..." />
-                <marker date="1485614118051" expanded="true" signature="58598:58605" ph="×" />
+                <marker date="1485676030307" expanded="true" signature="4841:4898" ph="SELECT st_pi... ${$student_table}" />
+                <marker date="1485676030307" expanded="true" signature="7813:7936" ph="SELECT * FRO... jobs" />
+                <marker date="1485676030307" expanded="true" signature="10909:10961" ph="select * fro... ${$student_table}" />
+                <marker date="1485676030307" expanded="true" signature="17180:17232" ph="SELECT * fro... ${$student_table}" />
+                <marker date="1485676030307" expanded="true" signature="17479:17556" ph="UPDATE ${$st... " />
+                <marker date="1485676030307" expanded="true" signature="18408:18486" ph="UPDATE ${$st... " />
+                <marker date="1485676030307" expanded="true" signature="19836:19888" ph="SELECT * FRO... ${$student_table}" />
+                <marker date="1485676030307" expanded="true" signature="22625:22677" ph="SELECT * FRO... ${$student_table}" />
+                <marker date="1485676030307" expanded="true" signature="103324:104696" ph="..." />
+                <marker date="1485676030307" expanded="true" signature="103382:104660" ph="..." />
+                <marker date="1485676030307" expanded="true" signature="103442:104623" ph="..." />
+                <marker date="1485676030307" expanded="true" signature="103502:103726" ph="..." />
+                <marker date="1485676030307" expanded="false" signature="103598:103605" ph="×" />
+                <marker date="1485676030307" expanded="true" signature="103818:104585" ph="..." />
+                <marker date="1485676030307" expanded="true" signature="103877:104106" ph="..." />
+                <marker date="1485676030307" expanded="false" signature="103993:104019" ph="..." />
+                <marker date="1485676030307" expanded="true" signature="104208:104544" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/settings.php">
+      <file leaf-file-name="getuser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_login/jobs/getuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <marker date="1485614118054" expanded="true" signature="514:588" ph="UPDATE login... " />
-                <marker date="1485614118054" expanded="true" signature="5976:5999" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118054" expanded="true" signature="6300:6373" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118054" expanded="true" signature="7634:7657" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118054" expanded="true" signature="8010:8024" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118054" expanded="true" signature="11380:11430" ph="select * fro... login_admin" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coordinator_login/connect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coordinator_login/process.php">
+      <file leaf-file-name="filter_result.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_login/jobs/filter_result.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="21199">
+              <caret line="1011" column="0" lean-forward="true" selection-start-line="1011" selection-start-column="0" selection-end-line="1011" selection-end-column="0" />
               <folding>
-                <marker date="1485614118054" expanded="true" signature="358:419" ph="SELECT * FRO... login_coordinator" />
+                <marker date="1485690149892" expanded="true" signature="6071:6128" ph="SELECT * FRO... company_list" />
+                <marker date="1485690149892" expanded="true" signature="6329:6673" ph="INSERT INTO jobs... " />
+                <marker date="1485690149892" expanded="true" signature="6949:6991" ph="SELECT * FRO... table_map" />
+                <marker date="1485690149892" expanded="true" signature="7249:7346" ph="ALTER TABLE ${$students_table_name}... " />
+                <marker date="1485690149892" expanded="true" signature="7472:7739" ph="UPDATE ${$st... " />
+                <marker date="1485690149892" expanded="true" signature="7917:7979" ph="SELECT * FRO... ${$students_table_name}" />
+                <marker date="1485690149892" expanded="true" signature="10107:10130" ph="SELECT * FRO... table_map" />
+                <marker date="1485690149892" expanded="true" signature="10431:10504" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485690149892" expanded="true" signature="11768:11791" ph="SELECT * FRO... table_map" />
+                <marker date="1485690149892" expanded="true" signature="12144:12158" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485690149892" expanded="true" signature="15523:15573" ph="select * fro... login_admin" />
+                <marker date="1485690149892" expanded="true" signature="29691:29729" ph="SELECT * FRO... jobs" />
+                <marker date="1485690149892" expanded="true" signature="30203:30314" ph="SELECT * FRO... students_" />
+                <marker date="1485690149892" expanded="true" signature="39953:39985" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_jobs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/jobs/post_jobs.php">
+      <file leaf-file-name="jobs_panel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_login/jobs/jobs_panel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-              <folding>
-                <marker date="1485527495527" expanded="true" signature="6764:6787" ph="SELECT * FRO... table_map" />
-                <marker date="1485527495527" expanded="true" signature="7088:7161" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485527495527" expanded="true" signature="8265:8288" ph="SELECT * FRO... table_map" />
-                <marker date="1485527495527" expanded="true" signature="8577:8591" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485527495527" expanded="true" signature="11672:11722" ph="select * fro... login_admin" />
-                <marker date="1485527495527" expanded="true" signature="22392:22418" ph="SELECT * FRO... company_list" />
-                <marker date="1485527495527" expanded="true" signature="25715:25738" ph="SELECT * FRO... table_map" />
-                <marker date="1485527495527" expanded="true" signature="43979:44011" ph="..." />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_company.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_login/company/create_company.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30798">
+              <caret line="1062" column="0" lean-forward="false" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,175 +120,50 @@
       <file leaf-file-name="job_filter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin_login/jobs/job_filter.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="872">
+              <caret line="272" column="9" lean-forward="true" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+              <folding>
+                <marker date="1485687881552" expanded="true" signature="6067:6124" ph="SELECT * FRO... company_list" />
+                <marker date="1485687881552" expanded="true" signature="6325:6669" ph="INSERT INTO jobs... " />
+                <marker date="1485687881552" expanded="true" signature="6945:6987" ph="SELECT * FRO... table_map" />
+                <marker date="1485687881552" expanded="true" signature="7245:7342" ph="ALTER TABLE ${$students_table_name}... " />
+                <marker date="1485687881552" expanded="true" signature="7468:7735" ph="UPDATE ${$st... " />
+                <marker date="1485687881552" expanded="true" signature="7913:7975" ph="SELECT * FRO... ${$students_table_name}" />
+                <marker date="1485687881552" expanded="true" signature="10103:10126" ph="SELECT * FRO... table_map" />
+                <marker date="1485687881552" expanded="true" signature="10427:10500" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485687881552" expanded="true" signature="11764:11787" ph="SELECT * FRO... table_map" />
+                <marker date="1485687881552" expanded="true" signature="12140:12154" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485687881552" expanded="true" signature="15519:15569" ph="select * fro... login_admin" />
+                <marker date="1485687881552" expanded="true" signature="44407:44439" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="status.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin_login/status.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="879" column="16" lean-forward="false" selection-start-line="879" selection-start-column="16" selection-end-line="879" selection-end-column="16" />
+              <folding>
+                <element signature="e#22051#22057#0#HTML" expanded="true" />
+                <element signature="e#22058#22064#0#HTML" expanded="true" />
+                <marker date="1485691930851" expanded="true" signature="496:570" ph="UPDATE login... " />
+                <marker date="1485691930851" expanded="true" signature="6309:6332" ph="SELECT * FRO... table_map" />
+                <marker date="1485691930851" expanded="true" signature="6633:6706" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485691930851" expanded="true" signature="7807:7830" ph="SELECT * FRO... table_map" />
+                <marker date="1485691930851" expanded="true" signature="8119:8133" ph="SELECT * fro... ${$tname}" />
+                <marker date="1485691930851" expanded="true" signature="11201:11251" ph="select * fro... login_admin" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_login/index.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
-              <caret line="204" column="25" lean-forward="false" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
-              <folding>
-                <marker date="1485614118052" expanded="true" signature="6068:6125" ph="SELECT * FRO... company_list" />
-                <marker date="1485614118052" expanded="true" signature="6326:6670" ph="INSERT INTO jobs... " />
-                <marker date="1485614118052" expanded="true" signature="6946:6988" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118052" expanded="true" signature="7246:7343" ph="ALTER TABLE ${$students_table_name}... " />
-                <marker date="1485614118052" expanded="true" signature="7469:7736" ph="UPDATE ${$st... " />
-                <marker date="1485614118052" expanded="true" signature="7914:7976" ph="SELECT * FRO... ${$students_table_name}" />
-                <marker date="1485614118052" expanded="true" signature="10104:10127" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118052" expanded="true" signature="10428:10501" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118052" expanded="true" signature="11765:11788" ph="SELECT * FRO... table_map" />
-                <marker date="1485614118052" expanded="true" signature="12141:12155" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485614118052" expanded="true" signature="15520:15570" ph="select * fro... login_admin" />
-                <marker date="1485614118052" expanded="true" signature="44405:44437" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/profile/profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="1546" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3401" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#2;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#2;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#9;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#10;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#11;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#12;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#13;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#14;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#15;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#16;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#17;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#7;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#14;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#5;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#93956#93963#0#HTML" expanded="true" />
-                <element signature="e#98253#98260#0#HTML" expanded="true" />
-                <element signature="e#130053#130060#0#HTML" expanded="true" />
-                <element signature="e#145768#145775#0#HTML" expanded="true" />
-                <element signature="e#152838#152845#0#HTML" expanded="true" />
-                <element signature="e#159402#159409#0#HTML" expanded="true" />
-                <element signature="e#161209#161215#0#HTML" expanded="true" />
-                <element signature="e#161216#161222#0#HTML" expanded="true" />
-                <element signature="e#174976#175495#0#HTML" expanded="true" />
-                <marker date="1485615137914" expanded="true" signature="595:641" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="776:936" ph="UPDATE ${$tn... " />
-                <marker date="1485615137914" expanded="true" signature="2021:2067" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="2211:2757" ph="UPDATE ${$tn... " />
-                <marker date="1485615137914" expanded="true" signature="4476:4522" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="4666:5723" ph="UPDATE ${$tn... " />
-                <marker date="1485615137914" expanded="true" signature="6447:6493" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="6632:6887" ph="UPDATE ${$tn... " />
-                <marker date="1485615137914" expanded="true" signature="11748:11798" ph="SELECT * fro... login_admin" />
-                <marker date="1485615137914" expanded="true" signature="12045:12120" ph="UPDATE login... " />
-                <marker date="1485615137914" expanded="true" signature="14629:14652" ph="SELECT * FRO... table_map" />
-                <marker date="1485615137914" expanded="true" signature="14953:15026" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="16130:16153" ph="SELECT * FRO... table_map" />
-                <marker date="1485615137914" expanded="true" signature="16442:16456" ph="SELECT * fro... ${$tname}" />
-                <marker date="1485615137914" expanded="true" signature="19534:19584" ph="select * fro... login_admin" />
-                <marker date="1485615137914" expanded="true" signature="30848:30904" ph="SELECT * FRO... table_map" />
-                <marker date="1485615137914" expanded="true" signature="31243:31297" ph="SELECT * FRO... ${$student_table}" />
-                <marker date="1485615137914" expanded="true" signature="33557:33613" ph="SELECT * FRO... table_map" />
-                <marker date="1485615137914" expanded="true" signature="33914:33970" ph="SELECT * FRO... ${$student_table}" />
-                <marker date="1485615137914" expanded="true" signature="175728:177268" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="175794:177224" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="175862:177179" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="175930:176178" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="176034:176041" ph="×" />
-                <marker date="1485615137914" expanded="true" signature="176286:177133" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="176353:176606" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="176485:176511" ph="..." />
-                <marker date="1485615137914" expanded="true" signature="176724:177084" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reports.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/reports/reports.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_lists.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_login/reports/show_lists.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="543" column="50" lean-forward="false" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -291,13 +174,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>styles</find>
-      <find>search</find>
       <find>login.html</find>
       <find>&quot;assets</find>
       <find>personal</find>
       <find>8</find>
       <find>notifi</find>
-      <find>welcome</find>
       <find>isset</find>
       <find>$_S</find>
       <find>log</find>
@@ -306,6 +187,15 @@
       <find>please enter the desc</find>
       <find>insert into</find>
       <find>validate-form</find>
+      <find>register no</find>
+      <find>register nu</find>
+      <find>conf</find>
+      <find>post</find>
+      <find>search</find>
+      <find>demo</find>
+      <find>body</find>
+      <find>welcome</find>
+      <find>progressbar</find>
     </findStrings>
     <replaceStrings>
       <replace>login.php</replace>
@@ -318,8 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin_login/reports/reports.php" />
-        <option value="$PROJECT_DIR$/admin_login/reports/show_lists.php" />
         <option value="$PROJECT_DIR$/admin_login/jobs/view_jobs.php" />
         <option value="$PROJECT_DIR$/admin_login/jobs/jobs_panel.php" />
         <option value="$PROJECT_DIR$/admin_login/jobs/getuser.php" />
@@ -357,18 +245,20 @@
         <option value="$PROJECT_DIR$/login_out/login_validation.php" />
         <option value="$PROJECT_DIR$/login_out/logout.php" />
         <option value="$PROJECT_DIR$/student_login/index.php" />
-        <option value="$PROJECT_DIR$/student_login/profile/profile.php" />
         <option value="$PROJECT_DIR$/student_login/settings.php" />
         <option value="$PROJECT_DIR$/student_login/jobs/view_jobs.php" />
         <option value="$PROJECT_DIR$/student_login/company/companies.php" />
         <option value="$PROJECT_DIR$/student_login/company/company_details.php" />
         <option value="$PROJECT_DIR$/student_login/process.php" />
         <option value="$PROJECT_DIR$/coordinator_login/process.php" />
-        <option value="$PROJECT_DIR$/admin_login/jobs/job_filter.php" />
-        <option value="$PROJECT_DIR$/admin_login/profile/profile.php" />
         <option value="$PROJECT_DIR$/admin_login/settings.php" />
         <option value="$PROJECT_DIR$/admin_login/process.php" />
         <option value="$PROJECT_DIR$/admin_login/company/create_company.php" />
+        <option value="$PROJECT_DIR$/student_login/profile/profile.php" />
+        <option value="$PROJECT_DIR$/admin_login/jobs/job_filter.php" />
+        <option value="$PROJECT_DIR$/admin_login/jobs/filter_result.php" />
+        <option value="$PROJECT_DIR$/admin_login/profile/profile.php" />
+        <option value="$PROJECT_DIR$/admin_login/status.php" />
       </list>
     </option>
   </component>
@@ -399,7 +289,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -413,45 +302,14 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_rmkhiringsynergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_rmkhiringsynergy" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin_login" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_rmkhiringsynergy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_rmkhiringsynergy" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin_login" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practiseprojects/ace-master" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.rmk">
@@ -532,33 +390,35 @@
       <workItem from="1485523468169" duration="10344000" />
       <workItem from="1485537482397" duration="1528000" />
       <workItem from="1485609146280" duration="3796000" />
+      <workItem from="1485678201975" duration="927000" />
+      <workItem from="1485687303260" duration="4504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22037000" />
+    <option name="totallyTimeSpent" value="27468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13850997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13850997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,62 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin_login/search/advanced_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/search/search_action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="320" column="48" lean-forward="false" selection-start-line="320" selection-start-column="43" selection-end-line="320" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/approve.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/editcomp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator_login/company/company_details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator_login/company/view_companies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coordinator_login/jobs/getuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coordinator_login/jobs/view_jobs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -708,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poster.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -763,17 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="368" column="36" lean-forward="false" selection-start-line="368" selection-start-column="24" selection-end-line="368" selection-end-column="36" />
-          <folding>
-            <marker date="1485535686879" expanded="true" signature="712:766" ph="SELECT * FRO... admin_login" />
-            <marker date="1485535686879" expanded="true" signature="1784:1838" ph="SELECT * FRO... login_admin" />
-            <marker date="1485535686879" expanded="true" signature="2130:2190" ph="SELECT * FRO... login_coordinator" />
-            <marker date="1485535686879" expanded="true" signature="2652:2708" ph="SELECT * FRO... table_map" />
-            <marker date="1485535686879" expanded="true" signature="2976:3032" ph="SELECT * FRO... ${$student_table}" />
-            <marker date="1485535686879" expanded="true" signature="5205:5267" ph="SELECT * FRO... admin_login" />
-            <marker date="1485535686879" expanded="true" signature="6489:6545" ph="SELECT * FRO... table_map" />
-            <marker date="1485535686879" expanded="true" signature="6992:7079" ph="UPDATE ${$st... " />
-            <marker date="1485535686879" expanded="true" signature="7238:7302" ph="SELECT * FRO... ${$student_table}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,29 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_login/profile/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1485540258676" expanded="true" signature="17180:17232" ph="SELECT * fro... ${$student_table}" />
-            <marker date="1485540258676" expanded="true" signature="17479:17556" ph="UPDATE ${$st... " />
-            <marker date="1485540258676" expanded="true" signature="18408:18486" ph="UPDATE ${$st... " />
-            <marker date="1485540258676" expanded="true" signature="19836:19888" ph="SELECT * FRO... ${$student_table}" />
-            <marker date="1485540258676" expanded="true" signature="22625:22677" ph="SELECT * FRO... ${$student_table}" />
-            <marker date="1485540258676" expanded="true" signature="103324:104696" ph="..." />
-            <marker date="1485540258676" expanded="true" signature="103382:104660" ph="..." />
-            <marker date="1485540258676" expanded="true" signature="103442:104623" ph="..." />
-            <marker date="1485540258676" expanded="true" signature="103502:103726" ph="..." />
-            <marker date="1485540258676" expanded="false" signature="103598:103605" ph="×" />
-            <marker date="1485540258676" expanded="true" signature="103818:104585" ph="..." />
-            <marker date="1485540258676" expanded="true" signature="103877:104106" ph="..." />
-            <marker date="1485540258676" expanded="false" signature="103993:104019" ph="..." />
-            <marker date="1485540258676" expanded="true" signature="104208:104544" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_login/settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -825,14 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8120">
           <caret line="280" column="60" lean-forward="false" selection-start-line="280" selection-start-column="60" selection-end-line="280" selection-end-column="60" />
-          <folding>
-            <marker date="1485540258669" expanded="true" signature="16328:16386" ph="UPDATE jobs " />
-            <marker date="1485540258669" expanded="true" signature="16335:16386" ph="SELECT * FRO... jobs" />
-            <marker date="1485540258669" expanded="true" signature="16707:16789" ph="SELECT * FRO... jobs" />
-            <marker date="1485540258669" expanded="true" signature="39084:39141" ph="SELECT * FRO... company_list" />
-            <marker date="1485540258669" expanded="true" signature="46708:46833" ph="SELECT * FRO... jobs" />
-            <marker date="1485540258669" expanded="true" signature="69112:69169" ph="SELECT * FRO... company_list" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1485527495096" expanded="true" signature="4421:4463" ph="SELECT * FRO... students_list" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,13 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2030">
           <caret line="100" column="23" lean-forward="false" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-          <folding>
-            <marker date="1485527495436" expanded="true" signature="5408:5431" ph="SELECT * FRO... table_map" />
-            <marker date="1485527495436" expanded="true" signature="5732:5805" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485527495436" expanded="true" signature="7069:7092" ph="SELECT * FRO... table_map" />
-            <marker date="1485527495436" expanded="true" signature="7445:7459" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485527495436" expanded="true" signature="10830:10886" ph="select * fro... login_admin" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,150 +701,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin_login/jobs/post_jobs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="2088">
           <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-          <folding>
-            <marker date="1485527495527" expanded="true" signature="6764:6787" ph="SELECT * FRO... table_map" />
-            <marker date="1485527495527" expanded="true" signature="7088:7161" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485527495527" expanded="true" signature="8265:8288" ph="SELECT * FRO... table_map" />
-            <marker date="1485527495527" expanded="true" signature="8577:8591" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485527495527" expanded="true" signature="11672:11722" ph="select * fro... login_admin" />
-            <marker date="1485527495527" expanded="true" signature="22392:22418" ph="SELECT * FRO... company_list" />
-            <marker date="1485527495527" expanded="true" signature="25715:25738" ph="SELECT * FRO... table_map" />
-            <marker date="1485527495527" expanded="true" signature="43979:44011" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/profile/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="1546" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3401" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#2;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#2;n#small#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#9;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#10;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#11;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#12;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#13;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#14;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#16;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#17;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#10;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#12;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#14;n#div#0;n#div#1;n#div#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#5;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#93956#93963#0#HTML" expanded="true" />
-            <element signature="e#98253#98260#0#HTML" expanded="true" />
-            <element signature="e#130053#130060#0#HTML" expanded="true" />
-            <element signature="e#145768#145775#0#HTML" expanded="true" />
-            <element signature="e#152838#152845#0#HTML" expanded="true" />
-            <element signature="e#159402#159409#0#HTML" expanded="true" />
-            <element signature="e#161209#161215#0#HTML" expanded="true" />
-            <element signature="e#161216#161222#0#HTML" expanded="true" />
-            <element signature="e#174976#175495#0#HTML" expanded="true" />
-            <marker date="1485615137914" expanded="true" signature="595:641" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="776:936" ph="UPDATE ${$tn... " />
-            <marker date="1485615137914" expanded="true" signature="2021:2067" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="2211:2757" ph="UPDATE ${$tn... " />
-            <marker date="1485615137914" expanded="true" signature="4476:4522" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="4666:5723" ph="UPDATE ${$tn... " />
-            <marker date="1485615137914" expanded="true" signature="6447:6493" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="6632:6887" ph="UPDATE ${$tn... " />
-            <marker date="1485615137914" expanded="true" signature="11748:11798" ph="SELECT * fro... login_admin" />
-            <marker date="1485615137914" expanded="true" signature="12045:12120" ph="UPDATE login... " />
-            <marker date="1485615137914" expanded="true" signature="14629:14652" ph="SELECT * FRO... table_map" />
-            <marker date="1485615137914" expanded="true" signature="14953:15026" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="16130:16153" ph="SELECT * FRO... table_map" />
-            <marker date="1485615137914" expanded="true" signature="16442:16456" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485615137914" expanded="true" signature="19534:19584" ph="select * fro... login_admin" />
-            <marker date="1485615137914" expanded="true" signature="30848:30904" ph="SELECT * FRO... table_map" />
-            <marker date="1485615137914" expanded="true" signature="31243:31297" ph="SELECT * FRO... ${$student_table}" />
-            <marker date="1485615137914" expanded="true" signature="33557:33613" ph="SELECT * FRO... table_map" />
-            <marker date="1485615137914" expanded="true" signature="33914:33970" ph="SELECT * FRO... ${$student_table}" />
-            <marker date="1485615137914" expanded="true" signature="175728:177268" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="175794:177224" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="175862:177179" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="175930:176178" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="176034:176041" ph="×" />
-            <marker date="1485615137914" expanded="true" signature="176286:177133" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="176353:176606" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="176485:176511" ph="..." />
-            <marker date="1485615137914" expanded="true" signature="176724:177084" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,61 +711,203 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1485614118054" expanded="true" signature="514:588" ph="UPDATE login... " />
-            <marker date="1485614118054" expanded="true" signature="5976:5999" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118054" expanded="true" signature="6300:6373" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118054" expanded="true" signature="7634:7657" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118054" expanded="true" signature="8010:8024" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118054" expanded="true" signature="11380:11430" ph="select * fro... login_admin" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin_login/process.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <marker date="1485614118053" expanded="true" signature="352:407" ph="SELECT * FRO... login_admin" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/jobs/job_filter.php">
+    <entry file="file://$PROJECT_DIR$/admin_login/company/create_company.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="204" column="25" lean-forward="false" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
+        <state relative-caret-position="30798">
+          <caret line="1062" column="0" lean-forward="false" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/reports/reports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_login/profile/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7569">
+          <caret line="600" column="4" lean-forward="false" selection-start-line="600" selection-start-column="4" selection-end-line="600" selection-end-column="4" />
           <folding>
-            <marker date="1485614118052" expanded="true" signature="6068:6125" ph="SELECT * FRO... company_list" />
-            <marker date="1485614118052" expanded="true" signature="6326:6670" ph="INSERT INTO jobs... " />
-            <marker date="1485614118052" expanded="true" signature="6946:6988" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118052" expanded="true" signature="7246:7343" ph="ALTER TABLE ${$students_table_name}... " />
-            <marker date="1485614118052" expanded="true" signature="7469:7736" ph="UPDATE ${$st... " />
-            <marker date="1485614118052" expanded="true" signature="7914:7976" ph="SELECT * FRO... ${$students_table_name}" />
-            <marker date="1485614118052" expanded="true" signature="10104:10127" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118052" expanded="true" signature="10428:10501" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118052" expanded="true" signature="11765:11788" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118052" expanded="true" signature="12141:12155" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118052" expanded="true" signature="15520:15570" ph="select * fro... login_admin" />
-            <marker date="1485614118052" expanded="true" signature="44405:44437" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="4841:4898" ph="SELECT st_pi... ${$student_table}" />
+            <marker date="1485676030307" expanded="true" signature="7813:7936" ph="SELECT * FRO... jobs" />
+            <marker date="1485676030307" expanded="true" signature="10909:10961" ph="select * fro... ${$student_table}" />
+            <marker date="1485676030307" expanded="true" signature="17180:17232" ph="SELECT * fro... ${$student_table}" />
+            <marker date="1485676030307" expanded="true" signature="17479:17556" ph="UPDATE ${$st... " />
+            <marker date="1485676030307" expanded="true" signature="18408:18486" ph="UPDATE ${$st... " />
+            <marker date="1485676030307" expanded="true" signature="19836:19888" ph="SELECT * FRO... ${$student_table}" />
+            <marker date="1485676030307" expanded="true" signature="22625:22677" ph="SELECT * FRO... ${$student_table}" />
+            <marker date="1485676030307" expanded="true" signature="103324:104696" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="103382:104660" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="103442:104623" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="103502:103726" ph="..." />
+            <marker date="1485676030307" expanded="false" signature="103598:103605" ph="×" />
+            <marker date="1485676030307" expanded="true" signature="103818:104585" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="103877:104106" ph="..." />
+            <marker date="1485676030307" expanded="false" signature="103993:104019" ph="..." />
+            <marker date="1485676030307" expanded="true" signature="104208:104544" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login/company/create_company.php">
+    <entry file="file://$PROJECT_DIR$/admin_login/reports/show_lists.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/jobs/getuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/jobs/filter_result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21199">
+          <caret line="1011" column="0" lean-forward="true" selection-start-line="1011" selection-start-column="0" selection-end-line="1011" selection-end-column="0" />
+          <folding>
+            <marker date="1485690149892" expanded="true" signature="6071:6128" ph="SELECT * FRO... company_list" />
+            <marker date="1485690149892" expanded="true" signature="6329:6673" ph="INSERT INTO jobs... " />
+            <marker date="1485690149892" expanded="true" signature="6949:6991" ph="SELECT * FRO... table_map" />
+            <marker date="1485690149892" expanded="true" signature="7249:7346" ph="ALTER TABLE ${$students_table_name}... " />
+            <marker date="1485690149892" expanded="true" signature="7472:7739" ph="UPDATE ${$st... " />
+            <marker date="1485690149892" expanded="true" signature="7917:7979" ph="SELECT * FRO... ${$students_table_name}" />
+            <marker date="1485690149892" expanded="true" signature="10107:10130" ph="SELECT * FRO... table_map" />
+            <marker date="1485690149892" expanded="true" signature="10431:10504" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690149892" expanded="true" signature="11768:11791" ph="SELECT * FRO... table_map" />
+            <marker date="1485690149892" expanded="true" signature="12144:12158" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690149892" expanded="true" signature="15523:15573" ph="select * fro... login_admin" />
+            <marker date="1485690149892" expanded="true" signature="29691:29729" ph="SELECT * FRO... jobs" />
+            <marker date="1485690149892" expanded="true" signature="30203:30314" ph="SELECT * FRO... students_" />
+            <marker date="1485690149892" expanded="true" signature="39953:39985" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/jobs/jobs_panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/jobs/job_filter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="272" column="9" lean-forward="true" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+          <folding>
+            <marker date="1485687881552" expanded="true" signature="6067:6124" ph="SELECT * FRO... company_list" />
+            <marker date="1485687881552" expanded="true" signature="6325:6669" ph="INSERT INTO jobs... " />
+            <marker date="1485687881552" expanded="true" signature="6945:6987" ph="SELECT * FRO... table_map" />
+            <marker date="1485687881552" expanded="true" signature="7245:7342" ph="ALTER TABLE ${$students_table_name}... " />
+            <marker date="1485687881552" expanded="true" signature="7468:7735" ph="UPDATE ${$st... " />
+            <marker date="1485687881552" expanded="true" signature="7913:7975" ph="SELECT * FRO... ${$students_table_name}" />
+            <marker date="1485687881552" expanded="true" signature="10103:10126" ph="SELECT * FRO... table_map" />
+            <marker date="1485687881552" expanded="true" signature="10427:10500" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485687881552" expanded="true" signature="11764:11787" ph="SELECT * FRO... table_map" />
+            <marker date="1485687881552" expanded="true" signature="12140:12154" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485687881552" expanded="true" signature="15519:15569" ph="select * fro... login_admin" />
+            <marker date="1485687881552" expanded="true" signature="44407:44439" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/profile/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="1059" column="65" lean-forward="true" selection-start-line="1059" selection-start-column="65" selection-end-line="1059" selection-end-column="65" />
+          <folding>
+            <marker date="1485690147882" expanded="true" signature="595:641" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="776:936" ph="UPDATE ${$tn... " />
+            <marker date="1485690147882" expanded="true" signature="2021:2067" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="2211:2757" ph="UPDATE ${$tn... " />
+            <marker date="1485690147882" expanded="true" signature="4476:4522" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="4666:5723" ph="UPDATE ${$tn... " />
+            <marker date="1485690147882" expanded="true" signature="6447:6493" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="6632:6887" ph="UPDATE ${$tn... " />
+            <marker date="1485690147882" expanded="true" signature="11748:11798" ph="SELECT * fro... login_admin" />
+            <marker date="1485690147882" expanded="true" signature="12045:12120" ph="UPDATE login... " />
+            <marker date="1485690147882" expanded="true" signature="14629:14652" ph="SELECT * FRO... table_map" />
+            <marker date="1485690147882" expanded="true" signature="14953:15026" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="16130:16153" ph="SELECT * FRO... table_map" />
+            <marker date="1485690147882" expanded="true" signature="16442:16456" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485690147882" expanded="true" signature="19534:19584" ph="select * fro... login_admin" />
+            <marker date="1485690147882" expanded="true" signature="30850:30906" ph="SELECT * FRO... table_map" />
+            <marker date="1485690147882" expanded="true" signature="31245:31299" ph="SELECT * FRO... ${$student_table}" />
+            <marker date="1485690147882" expanded="true" signature="33559:33615" ph="SELECT * FRO... table_map" />
+            <marker date="1485690147882" expanded="true" signature="33916:33972" ph="SELECT * FRO... ${$student_table}" />
+            <marker date="1485690147882" expanded="true" signature="175731:177271" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="175797:177227" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="175865:177182" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="175933:176181" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="176037:176044" ph="×" />
+            <marker date="1485690147882" expanded="true" signature="176289:177136" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="176356:176609" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="176488:176514" ph="..." />
+            <marker date="1485690147882" expanded="true" signature="176727:177087" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="516" column="21" lean-forward="false" selection-start-line="516" selection-start-column="21" selection-end-line="516" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendors/bootstrap/dist/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="459" column="54" lean-forward="true" selection-start-line="459" selection-start-column="54" selection-end-line="459" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
-          <caret line="1062" column="0" lean-forward="false" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
+          <caret line="543" column="50" lean-forward="false" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_login/status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="879" column="16" lean-forward="false" selection-start-line="879" selection-start-column="16" selection-end-line="879" selection-end-column="16" />
           <folding>
-            <marker date="1485614118051" expanded="true" signature="4963:5098" ph="INSERT INTO company_list... " />
-            <marker date="1485614118051" expanded="true" signature="7439:7462" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118051" expanded="true" signature="7763:7836" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118051" expanded="true" signature="9090:9113" ph="SELECT * FRO... table_map" />
-            <marker date="1485614118051" expanded="true" signature="9462:9476" ph="SELECT * fro... ${$tname}" />
-            <marker date="1485614118051" expanded="true" signature="12823:12873" ph="select * fro... login_admin" />
-            <marker date="1485614118051" expanded="true" signature="37231:37263" ph="..." />
-            <marker date="1485614118051" expanded="true" signature="58598:58605" ph="×" />
+            <element signature="e#22051#22057#0#HTML" expanded="true" />
+            <element signature="e#22058#22064#0#HTML" expanded="true" />
+            <marker date="1485691930851" expanded="true" signature="496:570" ph="UPDATE login... " />
+            <marker date="1485691930851" expanded="true" signature="6309:6332" ph="SELECT * FRO... table_map" />
+            <marker date="1485691930851" expanded="true" signature="6633:6706" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485691930851" expanded="true" signature="7807:7830" ph="SELECT * FRO... table_map" />
+            <marker date="1485691930851" expanded="true" signature="8119:8133" ph="SELECT * fro... ${$tname}" />
+            <marker date="1485691930851" expanded="true" signature="11201:11251" ph="select * fro... login_admin" />
           </folding>
         </state>
       </provider>
