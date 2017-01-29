@@ -1122,9 +1122,9 @@ else if(isset($_POST['send_mail']) && isset($_POST['search']) && isset($_SESSION
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>

@@ -1013,9 +1013,9 @@ if(isset($_GET['roll'])&& isset($_SESSION['user_role'])=='admin')
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>
@@ -3015,7 +3015,7 @@ if(isset($_GET['roll'])&& isset($_SESSION['user_role'])=='admin')
                     <script src="../assets/js/jquery.hotkeys.index.min.js"></script>
                     <script src="../assets/js/bootstrap-wysiwyg.min.js"></script>
                     <script src="../assets/js/select2.min.js"></script>
-                    <script src="../assets/js/spinbox.min.js"></script>
+                    <script src="../assets/js/spStatus.min.js"></script>
                     <script src="../assets/js/bootstrap-editable.min.js"></script>
                     <script src="../assets/js/ace-editable.min.js"></script>
                     <script src="../assets/js/jquery.maskedinput.min.js"></script>

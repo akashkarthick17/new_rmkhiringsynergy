@@ -642,9 +642,9 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>
@@ -972,6 +972,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                                 </th>
                                 <th class="  "><font size="3">Status</font></th>
                                 <th class="  "><font size="3"></font></th>
+                                <th class="  "><font size="3"></font></th>
 
                             </tr>
                             </thead>
@@ -1154,6 +1155,10 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                                 <td>
                                     <a href="#modal-form" class="btn btn-primary" data-toggle="modal" onclick="getjobid(<?php echo $row['job_id'] ?>)">Update Details</a>
 
+
+                                </td>
+                                <td>
+                                    <a href="../reports/show_lists.php?jid=<?php echo $row['job_id']; ?>&flag=1" class="btn btn-warning">Reports</a>
 
                                 </td>
 

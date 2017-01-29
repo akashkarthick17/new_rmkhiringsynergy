@@ -672,9 +672,9 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] == null && isset($_SESSION['u
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>

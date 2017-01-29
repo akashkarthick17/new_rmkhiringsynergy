@@ -757,9 +757,9 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>
@@ -983,7 +983,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
     <script src="../assets/js/jquery-ui.custom.min.js"></script>
     <script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
     <script src="../assets/js/chosen.jquery.min.js"></script>
-    <script src="../assets/js/spinbox.min.js"></script>
+    <script src="../assets/js/spStatus.min.js"></script>
     <script src="../assets/js/bootstrap-datepicker.min.js"></script>
     <script src="../assets/js/bootstrap-timepicker.min.js"></script>
     <script src="../assets/js/moment.min.js"></script>
@@ -1271,7 +1271,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
 
             $('#spinner1').ace_spinner({value:0,min:0,max:200,step:10, btn_up_class:'btn-info' , btn_down_class:'btn-info'})
                 .closest('.ace-spinner')
-                .on('changed.fu.spinbox', function(){
+                .on('changed.fu.spStatus', function(){
                     //console.log($('#spinner1').val())
                 });
             $('#spinner2').ace_spinner({value:0,min:0,max:10000,step:100, touch_spinner: true, icon_up:'ace-icon fa fa-caret-up bigger-110', icon_down:'ace-icon fa fa-caret-down bigger-110'});

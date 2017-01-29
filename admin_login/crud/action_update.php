@@ -644,9 +644,9 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null){
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>

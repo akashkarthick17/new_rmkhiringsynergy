@@ -643,9 +643,9 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                     </li>
 
                     <li class="">
-                        <a href="../inbox.php">
+                        <a href="../Status.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Inbox
+                            Status
                         </a>
 
                         <b class="arrow"></b>
@@ -915,7 +915,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tabbable">
-                            <ul id="inbox-tabs" class="inbox-tabs nav nav-tabs padding-16 tab-size-bigger tab-space-1">
+                            <ul id="Status-tabs" class="Status-tabs nav nav-tabs padding-16 tab-size-bigger tab-space-1">
 
 
 
@@ -1057,7 +1057,7 @@ if(! isset($_SESSION['user']) && $_SESSION['user']==null && isset($_SESSION['use
 <script src="../assets/js/jquery-ui.custom.min.js"></script>
 <script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="../assets/js/chosen.jquery.min.js"></script>
-<script src="../assets/js/spinbox.min.js"></script>
+<script src="../assets/js/spStatus.min.js"></script>
 <script src="../assets/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/js/bootstrap-timepicker.min.js"></script>
 <script src="../assets/js/moment.min.js"></script>
