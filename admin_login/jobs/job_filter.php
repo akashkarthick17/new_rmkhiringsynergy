@@ -305,7 +305,7 @@ if(isset($_GET['filter_job'])){
 
 
 
-        header("Location: post_jobs.php");
+        header("Location: filter_result.php?jid=$id");
 
 
 
